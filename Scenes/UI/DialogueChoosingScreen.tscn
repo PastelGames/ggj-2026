@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bx8webihycegv"]
+
+[ext_resource type="Texture2D" uid="uid://cwa3i6i60pdmj" path="res://Imported/Images/Character1Placeholder.png" id="1_mekqw"]
+[ext_resource type="Texture2D" uid="uid://ctprhhyoyjok5" path="res://Imported/Images/Character2Placeholder.png" id="2_5gar6"]
+[ext_resource type="PackedScene" uid="uid://c02st46xi030m" path="res://Scenes/UI/DialogueChoosingPanel.tscn" id="3_fkcqv"]
+
+[node name="DialogueSpeakingScreen" type="Control" unique_id=2003003836]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Character1TextureRect" type="TextureRect" parent="." unique_id=1472064666]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.402
+anchor_bottom = 0.99700004
+offset_right = -0.104003906
+offset_bottom = -0.056030273
+texture = ExtResource("1_mekqw")
+expand_mode = 1
+flip_h = true
+
+[node name="Character2TextureRect" type="TextureRect" parent="." unique_id=804761683]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5980903
+anchor_top = 0.0030864198
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(-468, 244)
+texture = ExtResource("2_5gar6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueChoosingPanel" parent="." unique_id=1479755516 instance=ExtResource("3_fkcqv")]
+layout_mode = 1
+anchor_left = 0.0625
+anchor_top = 0.61728394
+anchor_right = 0.9513889
+anchor_bottom = 0.9212963
