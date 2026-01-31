@@ -31,13 +31,16 @@ shape = SubResource("CircleShape2D_onrkg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=920943414]
 sprite_frames = SubResource("SpriteFrames_sweqy")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=1544787211]
+[node name="ShootPositionMarker" type="Marker2D" parent="." unique_id=1544787211]
 position = Vector2(0, -10)
-
-[node name="ShotTimer" type="Timer" parent="." unique_id=513685324]
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=556600381]
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1468270804]
 shape = SubResource("CircleShape2D_i3pqv")
+
+[node name="ShotTimer" type="Timer" parent="." unique_id=513685324]
+
+[node name="InvulnTimer" type="Timer" parent="." unique_id=181673731]
+one_shot = true

@@ -2,14 +2,30 @@ extends CharacterBody2D
 
 signal on_death
 
-const SPEED = 300.0
 const FRICTION = 100.0
 const ACC = 50.0
 
+@export var bullet_scene: PackedScene
+@export var speed = 300.0
+@export var shot_cd = 0.10
+
+var invuln = false
+
+@onready var hitbox: Area2D = $Hitbox
+@onready var shoot_timer: Timer = $ShotTimer
+@onready var invuln_timer: Timer = $InvulnTimer
+@onready var shot_origin: Marker2D = $ShootPositionMarker
 var direction = Vector2.ZERO
 var target_velocity = Vector2.ZERO
+var shot_direction = Vector2.ZERO
+
+func _ready() -> void:
+	shoot_timer.wait_time = shot_cd
+	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
+	invuln_timer.timeout.connect(_on_invuln_timeout)
 
 func _physics_process(delta: float) -> void:
+	
 	
 	# movement input
 	if Input.is_action_pressed("move_right"):
@@ -20,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		direction.y += 1
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
-	target_velocity = (direction.normalized() * SPEED)
+	target_velocity = (direction.normalized() * speed)
 	
 	# acceleration & friction calculations
 	if direction != Vector2.ZERO:
@@ -29,9 +45,36 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
 		velocity.y = move_toward(velocity.y, 0, FRICTION * delta)
-	velocity = velocity.clampf(-SPEED,SPEED)
+	velocity = velocity.clampf(-speed,speed)
 
 	# move and reset direction for next physics tick
 	move_and_slide()
-	rotation = direction.angle() + PI/2
+	look_at(get_global_mouse_position())
 	direction = Vector2.ZERO
+
+func _on_shoot_timer_timeout() -> void:
+	if not Input.is_action_pressed("shoot"):
+		return
+	if bullet_scene == null:
+		return
+	
+	var b = bullet_scene.instantiate()
+	get_tree().current_scene.add_child(b)
+	b.global_position = shot_origin.global_position
+	b.direction = global_rotation
+
+func _on_hitBox_entered(area : Area2D) -> void:
+	if invuln:
+		return
+	
+	var parent := area.get_parent()
+	if parent and parent.is_in_group("enemy_bullets"):
+		_die()
+
+func _die() -> void:
+	invuln = true
+	emit_signal("on_death")
+	invuln_timer.start()
+
+func _on_invuln_timeout() -> void:
+	invuln = false
