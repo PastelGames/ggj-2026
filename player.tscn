@@ -17,7 +17,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=551747429]
+[node name="Player" type="CharacterBody2D" unique_id=551747429]
 motion_mode = 1
 script = ExtResource("1_onrkg")
 
