@@ -38,3 +38,11 @@ func _spawn_enemy() -> void:
 
 func _on_player_died() -> void:
 	get_tree().reload_current_scene()
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("pause"):
+		get_node("PausePanel").global_position = player.global_position
+		get_tree().paused = true
+		get_node("PausePanel").show()
+		
+		

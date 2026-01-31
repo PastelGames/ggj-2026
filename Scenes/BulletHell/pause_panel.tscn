@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bfyoan7thjbs8"]
+
+[ext_resource type="Script" uid="uid://r3pwbr75h28y" path="res://Scripts/script_pause_menu.gd" id="1_ipfgy"]
+
+[node name="PausePanel" type="Control" unique_id=362086595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ipfgy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=90833995]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -318.0
+offset_right = 573.0
+offset_bottom = 331.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 0)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=117851654]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 170.0
+offset_right = 757.0
+offset_bottom = 279.0
+theme_override_font_sizes/font_size = 79
+text = "Paused"
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=1046417903]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 409.0
+offset_right = 675.0
+offset_bottom = 484.0
+text = "Resume
+"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
