@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://c1031ps30bjdd"]
+
+[ext_resource type="Script" uid="uid://kg15eommmj01" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://bqm1spqlwuemo" path="res://Scenes/BulletHell/bullet_player.tscn" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://cgchlgu0ywrea" path="res://player.PNG" id="3_r7osi"]
+[ext_resource type="Texture2D" uid="uid://ft82m62a03ve" path="res://Gun.png" id="4_vcbxa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 24.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_r7osi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3pqv"]
+
+[node name="Player" type="CharacterBody2D" unique_id=551747429]
+collision_mask = 18
+motion_mode = 1
+script = ExtResource("1_onrkg")
+bullet_scene = ExtResource("2_hqtel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1768745601]
+shape = SubResource("CircleShape2D_onrkg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=920943414]
+position = Vector2(0, -5)
+scale = Vector2(0.07, 0.07)
+sprite_frames = SubResource("SpriteFrames_sweqy")
+
+[node name="ShootPositionMarker" type="Marker2D" parent="." unique_id=1544787211]
+position = Vector2(35, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="ShootPositionMarker" unique_id=1617299563]
+position = Vector2(-10, 0)
+scale = Vector2(0.042588424, 0.042588416)
+texture = ExtResource("4_vcbxa")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=556600381]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1468270804]
+shape = SubResource("CircleShape2D_i3pqv")
+
+[node name="ShotTimer" type="Timer" parent="." unique_id=513685324]
+autostart = true
+
+[node name="InvulnTimer" type="Timer" parent="." unique_id=181673731]
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1511550858]
