@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cn4onh2yps4e1" path="res://character bullet hell.PNG" id="3_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 28.62
+radius = 24.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
 animations = [{
@@ -24,14 +24,17 @@ animations = [{
 collision_mask = 18
 motion_mode = 1
 script = ExtResource("1_onrkg")
+friction = 300.0
+acceleration = 200.0
 bullet_scene = ExtResource("2_hqtel")
+speed = 500.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1768745601]
-position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=920943414]
-scale = Vector2(0.2, 0.2)
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(0.07, 0.07)
 sprite_frames = SubResource("SpriteFrames_sweqy")
 
 [node name="ShootPositionMarker" type="Marker2D" parent="." unique_id=1544787211]
@@ -49,3 +52,5 @@ autostart = true
 
 [node name="InvulnTimer" type="Timer" parent="." unique_id=181673731]
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1511550858]
