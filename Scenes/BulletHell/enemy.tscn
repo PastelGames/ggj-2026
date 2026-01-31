@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://f3boarrjcb5t"]
 
-[ext_resource type="Script" uid="uid://b2et35x3kpp3y" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Script" uid="uid://b2et35x3kpp3y" path="res://Scripts/enemy.gd" id="1_7k104"]
 [ext_resource type="Texture2D" uid="uid://bsow6ktonnkd3" path="res://little_red_alien.png" id="2_iifgy"]
-[ext_resource type="Script" uid="uid://c8c6suy36845a" path="res://shooter.gd" id="3_qi2p4"]
-[ext_resource type="PackedScene" uid="uid://b6vjlljcng8rw" path="res://bullet_enemy.tscn" id="4_iifgy"]
+[ext_resource type="Script" uid="uid://c8c6suy36845a" path="res://Scripts/shooter.gd" id="3_qi2p4"]
+[ext_resource type="PackedScene" uid="uid://b6vjlljcng8rw" path="res://Scenes/BulletHell/bullet_enemy.tscn" id="4_iifgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
 radius = 37.93

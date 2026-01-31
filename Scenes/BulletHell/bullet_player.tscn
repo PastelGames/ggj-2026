@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqm1spqlwuemo"]
 
-[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://bullet.gd" id="1_qi13p"]
+[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://Scripts/bullet.gd" id="1_tp7ih"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_qi13p"]
 
@@ -11,7 +11,7 @@
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1962098920 groups=["player_bullets"]]
 collision_layer = 4
 collision_mask = 16
-script = ExtResource("1_qi13p")
+script = ExtResource("1_tp7ih")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1942737031]
 position = Vector2(2.3841858e-07, 0.5)

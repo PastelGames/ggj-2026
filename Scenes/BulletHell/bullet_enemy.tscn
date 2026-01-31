@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6vjlljcng8rw"]
 
-[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://bullet.gd" id="1_ca8xc"]
+[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://Scripts/bullet.gd" id="1_sqltv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4tyxl"]
 
@@ -11,7 +11,7 @@
 [node name="BulletEnemy" type="CharacterBody2D" unique_id=1576407887 groups=["enemy_bullets"]]
 collision_layer = 8
 collision_mask = 16
-script = ExtResource("1_ca8xc")
+script = ExtResource("1_sqltv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1224062995]
 shape = SubResource("CircleShape2D_4tyxl")
