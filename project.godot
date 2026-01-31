@@ -47,6 +47,8 @@ move_down={
 2d_physics/layer_2="Enemy"
 2d_physics/layer_3="PlayerBullets"
 2d_physics/layer_4="EnemyBullets"
+2d_physics/layer_5="Walls"
+2d_physics/layer_6="DamageAreas"
 
 [physics]
 

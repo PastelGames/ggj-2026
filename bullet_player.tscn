@@ -1,10 +1,24 @@
 [gd_scene format=3 uid="uid://bjr6br760iw2o"]
 
+[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://bullet.gd" id="1_qi13p"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ys20k"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi13p"]
+
 [node name="BulletPlayer" type="Area2D" unique_id=1734100711]
+collision_layer = 4
+collision_mask = 18
+script = ExtResource("1_qi13p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1810703152]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1427076431]
 shape = SubResource("CircleShape2D_ys20k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1748045363]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=948222325]
+shape = SubResource("CircleShape2D_qi13p")

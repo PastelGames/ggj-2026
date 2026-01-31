@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal on_death
 
 const SPEED = 300.0
 const FRICTION = 100.0
