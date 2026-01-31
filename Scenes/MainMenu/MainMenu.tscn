@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://djtgy34lb3syn"]
+
+[ext_resource type="Script" uid="uid://dqui0qr8ldfg7" path="res://script_main_menu.gd" id="1_cdkru"]
+[ext_resource type="PackedScene" uid="uid://dixdnt5jl7dyd" path="res://Scenes/MainMenu/Setting.tscn" id="2_c7oo3"]
+
+[node name="MainMenu" type="Control" unique_id=859440521]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdkru")
+
+[node name="ExitButton" type="Button" parent="." unique_id=166403615]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 514.0
+offset_right = 784.0
+offset_bottom = 591.0
+text = "Exit"
+
+[node name="PlayButton" type="Button" parent="." unique_id=1161363074]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 328.0
+offset_right = 784.0
+offset_bottom = 405.0
+text = "Play
+"
+
+[node name="SettingButton" type="Button" parent="." unique_id=1450288961]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 421.0
+offset_right = 784.0
+offset_bottom = 498.0
+text = "Setting
+"
+
+[node name="Setting" parent="." unique_id=1903170144 instance=ExtResource("2_c7oo3")]
+visible = false
+layout_mode = 0
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingButton" to="." method="_on_setting_button_pressed"]
