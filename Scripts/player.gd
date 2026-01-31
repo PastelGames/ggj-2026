@@ -7,7 +7,11 @@ signal died
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
 @export var shot_cd = 0.10
+@export var strength = 1
+@export var bullet_speed = 600.0
+@export var max_hp = 10
 
+var hp
 var invuln = false
 var bullet_parent: Node = null
 
@@ -21,6 +25,7 @@ var target_velocity = Vector2.ZERO
 var shot_direction = Vector2.ZERO
 
 func _ready() -> void:
+	hp = max_hp
 	shoot_timer.wait_time = shot_cd
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
 	invuln_timer.timeout.connect(_on_invuln_timeout)
@@ -67,7 +72,9 @@ func _on_shoot_timer_timeout() -> void:
 	var b = bullet_scene.instantiate()
 	bullet_parent.add_child(b)
 	b.global_position = shot_origin.global_position
-	b.direction = Vector2.from_angle(global_rotation).normalized()
+	b.direction = Vector2.from_angle(rotation).normalized()
+	b.damage = strength
+	b.speed = bullet_speed
 	
 func _on_hitBox_entered(area : Area2D) -> void:
 	if invuln:
@@ -75,7 +82,10 @@ func _on_hitBox_entered(area : Area2D) -> void:
 	
 	var parent := area.get_parent()
 	if parent and parent.is_in_group("enemy_bullets"):
+		hp -= parent.damage
 		parent.queue_free()
+		
+	if hp <= 0:
 		_die()
 
 func _die() -> void:
