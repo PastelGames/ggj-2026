@@ -1,24 +1,29 @@
-[gd_scene format=3 uid="uid://bjr6br760iw2o"]
+[gd_scene format=3 uid="uid://bqm1spqlwuemo"]
 
 [ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://bullet.gd" id="1_qi13p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qi13p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ys20k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi13p"]
 
-[node name="BulletPlayer" type="Area2D" unique_id=1734100711]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1962098920 groups=["player_bullets"]]
 collision_layer = 4
-collision_mask = 18
+collision_mask = 16
 script = ExtResource("1_qi13p")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1810703152]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1942737031]
+position = Vector2(2.3841858e-07, 0.5)
+scale = Vector2(13.999999, 14.999999)
+texture = SubResource("CanvasTexture_qi13p")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1427076431]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2099882219]
 shape = SubResource("CircleShape2D_ys20k")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1748045363]
+[node name="Area2D" type="Area2D" parent="." unique_id=1717508762 groups=["player_bullets"]]
 collision_layer = 32
 collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=948222325]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1197778773]
 shape = SubResource("CircleShape2D_qi13p")

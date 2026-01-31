@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5ttrcbrc8bx"
-path="res://.godot/imported/Illustration.jpg-7cde7d9f7a6fcebd9560030789e9fc68.ctex"
+uid="uid://cn4onh2yps4e1"
+path="res://.godot/imported/character bullet hell.PNG-1e76cb7698e2029931badee700b01b8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Illustration.jpg"
-dest_files=["res://.godot/imported/Illustration.jpg-7cde7d9f7a6fcebd9560030789e9fc68.ctex"]
+source_file="res://character bullet hell.PNG"
+dest_files=["res://.godot/imported/character bullet hell.PNG-1e76cb7698e2029931badee700b01b8b.ctex"]
 
 [params]
 

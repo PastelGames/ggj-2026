@@ -4,12 +4,16 @@ extends Node2D
 @export var enemy_scene: PackedScene
 
 var bullet_parent: Node = null
-
+var player_location: Vector2 = Vector2.ZERO
+var player: Node = null
 @onready var player_spawn: Marker2D = $PlayerSpawn
 @onready var enemy_spawn: Marker2D = $EnemySpawn
 @onready var bullets_player: Node2D = $BulletContainer_Player
 @onready var bullets_enemy: Node2D = $BulletContainer_Enemy
 @onready var enemies: Node2D = $EnemyContainer
+
+func _physics_process(delta: float) -> void:
+	player_location = player.global_position
 
 func _ready() -> void:
 	_spawn_player()
@@ -17,6 +21,7 @@ func _ready() -> void:
 
 func _spawn_player() -> void:
 	var p := player_scene.instantiate()
+	player = p
 	add_child(p)
 	p.global_position = player_spawn.global_position
 	p.bullet_parent = bullets_player
@@ -26,7 +31,7 @@ func _spawn_enemy() -> void:
 	var e := enemy_scene.instantiate()
 	enemies.add_child(e)
 	e.global_position = enemy_spawn.global_position
-	e.bullet_parent = bullets_enemy
+	
 	var shooter := e.get_node_or_null("Shooter")
 	if shooter:
 		shooter.bullet_container_path = bullets_enemy.get_path()

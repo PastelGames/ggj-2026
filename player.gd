@@ -2,9 +2,8 @@ extends CharacterBody2D
 
 signal died
 
-const FRICTION = 100.0
-const ACC = 50.0
-
+@export var friction = 100.0
+@export var acceleration = 50.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
 @export var shot_cd = 0.10
@@ -25,6 +24,7 @@ func _ready() -> void:
 	shoot_timer.wait_time = shot_cd
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
 	invuln_timer.timeout.connect(_on_invuln_timeout)
+	hitbox.area_entered.connect(_on_hitBox_entered)
 
 func _physics_process(delta: float) -> void:
 	
@@ -42,11 +42,11 @@ func _physics_process(delta: float) -> void:
 	
 	# acceleration & friction calculations
 	if direction != Vector2.ZERO:
-		velocity.x = move_toward(velocity.x, target_velocity.x, ACC * delta)
-		velocity.y = move_toward(velocity.y, target_velocity.y, ACC * delta)
+		velocity.x = move_toward(velocity.x, target_velocity.x, acceleration * delta)
+		velocity.y = move_toward(velocity.y, target_velocity.y, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
-		velocity.y = move_toward(velocity.y, 0, FRICTION * delta)
+		velocity.x = move_toward(velocity.x, 0, friction * delta)
+		velocity.y = move_toward(velocity.y, 0, friction * delta)
 	velocity = velocity.clampf(-speed,speed)
 
 	# move and reset direction for next physics tick
@@ -63,14 +63,16 @@ func _on_shoot_timer_timeout() -> void:
 	var b = bullet_scene.instantiate()
 	bullet_parent.add_child(b)
 	b.global_position = shot_origin.global_position
-	b.direction = global_rotation
-
+	b.direction = Vector2.from_angle(global_rotation).normalized()
+	
 func _on_hitBox_entered(area : Area2D) -> void:
+	print("hi")
 	if invuln:
 		return
 	
 	var parent := area.get_parent()
 	if parent and parent.is_in_group("enemy_bullets"):
+		parent.queue_free()
 		_die()
 
 func _die() -> void:
