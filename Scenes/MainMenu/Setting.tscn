@@ -26,7 +26,7 @@ offset_right = 720.0
 offset_bottom = 543.0
 text = "Back"
 
-[node name="VolumnText" type="Label" parent="." unique_id=1016195641]
+[node name="VolumeText" type="Label" parent="." unique_id=1016195641]
 layout_mode = 0
 offset_left = 197.0
 offset_top = 219.0
