@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 signal died
 
-@export var friction = 100.0
-@export var acceleration = 50.0
+@export var friction = 1000.0
+@export var acceleration = 1000.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
 @export var shot_cd = 0.10
@@ -38,9 +38,12 @@ func _physics_process(delta: float) -> void:
 		direction.y += 1
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
-	target_velocity = (direction.normalized() * speed)
 	
-	# acceleration & friction calculations
+	velocity = (direction.normalized() * speed)
+	
+	# below is acceleration & friction
+	#target_velocity = (direction.normalized() * speed)
+	'''
 	if direction != Vector2.ZERO:
 		velocity.x = move_toward(velocity.x, target_velocity.x, acceleration * delta)
 		velocity.y = move_toward(velocity.y, target_velocity.y, acceleration * delta)
@@ -48,7 +51,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, friction * delta)
 		velocity.y = move_toward(velocity.y, 0, friction * delta)
 	velocity = velocity.clampf(-speed,speed)
-
+	'''
+	
 	# move and reset direction for next physics tick
 	move_and_slide()
 	look_at(get_global_mouse_position())
