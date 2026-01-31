@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var despawn_time: float = 10.0
 @export var damage = 1
 
+
 var direction: Vector2 = Vector2.ZERO
 
 func _ready() -> void:

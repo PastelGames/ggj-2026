@@ -25,6 +25,7 @@ var target_velocity = Vector2.ZERO
 var shot_direction = Vector2.ZERO
 
 func _ready() -> void:
+
 	hp = max_hp
 	shoot_timer.wait_time = shot_cd
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
