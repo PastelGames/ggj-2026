@@ -66,7 +66,6 @@ func _on_shoot_timer_timeout() -> void:
 	b.direction = Vector2.from_angle(global_rotation).normalized()
 	
 func _on_hitBox_entered(area : Area2D) -> void:
-	print("hi")
 	if invuln:
 		return
 	
@@ -82,4 +81,3 @@ func _die() -> void:
 
 func _on_invuln_timeout() -> void:
 	invuln = false
-
