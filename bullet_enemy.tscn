@@ -4,7 +4,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ca8xc"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1576407887]
+[node name="BulletEnemy" type="CharacterBody2D" unique_id=1576407887 groups=["enemy_bullets"]]
 collision_layer = 8
 collision_mask = 17
 

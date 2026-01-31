@@ -14,6 +14,11 @@ config/name="GGJ 2026"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[global_group]
+
+player_bullets=""
+enemy_bullets=""
+
 [input]
 
 move_left={

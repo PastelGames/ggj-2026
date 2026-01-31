@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-signal on_death
+signal died
 
 const FRICTION = 100.0
 const ACC = 50.0
@@ -10,11 +10,13 @@ const ACC = 50.0
 @export var shot_cd = 0.10
 
 var invuln = false
+var bullet_parent: Node = null
 
 @onready var hitbox: Area2D = $Hitbox
 @onready var shoot_timer: Timer = $ShotTimer
 @onready var invuln_timer: Timer = $InvulnTimer
 @onready var shot_origin: Marker2D = $ShootPositionMarker
+
 var direction = Vector2.ZERO
 var target_velocity = Vector2.ZERO
 var shot_direction = Vector2.ZERO
@@ -59,7 +61,7 @@ func _on_shoot_timer_timeout() -> void:
 		return
 	
 	var b = bullet_scene.instantiate()
-	get_tree().current_scene.add_child(b)
+	bullet_parent.add_child(b)
 	b.global_position = shot_origin.global_position
 	b.direction = global_rotation
 
@@ -73,7 +75,7 @@ func _on_hitBox_entered(area : Area2D) -> void:
 
 func _die() -> void:
 	invuln = true
-	emit_signal("on_death")
+	emit_signal("died")
 	invuln_timer.start()
 
 func _on_invuln_timeout() -> void:
