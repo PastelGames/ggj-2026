@@ -32,4 +32,5 @@ func _physics_process(delta: float) -> void:
 
 	# move and reset direction for next physics tick
 	move_and_slide()
+	rotation = direction.angle() + PI/2
 	direction = Vector2.ZERO
