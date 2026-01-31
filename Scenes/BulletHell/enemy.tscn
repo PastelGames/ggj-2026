@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://f3boarrjcb5t"]
 
 [ext_resource type="Script" uid="uid://b2et35x3kpp3y" path="res://Scripts/enemy.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://bsow6ktonnkd3" path="res://little_red_alien.png" id="2_iifgy"]
+[ext_resource type="Texture2D" uid="uid://c3hdij52qhkvs" path="res://enemy_1.PNG" id="2_t5gw4"]
 [ext_resource type="Script" uid="uid://c8c6suy36845a" path="res://Scripts/shooter.gd" id="3_qi2p4"]
 [ext_resource type="PackedScene" uid="uid://b6vjlljcng8rw" path="res://Scenes/BulletHell/bullet_enemy.tscn" id="4_iifgy"]
 
@@ -12,7 +12,7 @@ radius = 37.93
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_iifgy")
+"texture": ExtResource("2_t5gw4")
 }],
 "loop": true,
 "name": &"default",
@@ -31,7 +31,8 @@ script = ExtResource("1_7k104")
 shape = SubResource("CircleShape2D_qi2p4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1572970015]
-scale = Vector2(0.3, 0.3)
+position = Vector2(4.000004, 5.000002)
+scale = Vector2(0.06866554, 0.06866554)
 sprite_frames = SubResource("SpriteFrames_iifgy")
 
 [node name="Shooter" type="Node" parent="." unique_id=1596275051]

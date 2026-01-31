@@ -25,7 +25,6 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	
 	# take damage and destroy bullet if parent is Player_Bullet
 	if parent and parent.is_in_group("player_bullets"):
-		print(parent)
 		hp -= 1
 		parent.queue_free()
 
