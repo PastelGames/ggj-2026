@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://jvq3kxl6s8dv"]
+
+[ext_resource type="Texture2D" uid="uid://8v4c7abimhrw" path="res://Imported/Images/Character2PlaceholderThumbnail.png" id="1_ownjv"]
+
+[node name="Panel" type="Panel" unique_id=1735828500]
+anchors_preset = -1
+anchor_left = 0.055555556
+anchor_top = 0.6296296
+anchor_right = 0.9444444
+anchor_bottom = 0.93364197
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1216936534]
+layout_mode = 0
+anchor_left = 0.0546875
+anchor_top = 0.08121827
+anchor_right = 0.2109375
+anchor_bottom = 0.893401
+texture = ExtResource("1_ownjv")
+expand_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueLabel" type="Label" parent="." unique_id=2047615845]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23400001
+anchor_right = 0.99200004
+anchor_bottom = 1.0
+offset_left = 16.383987
+offset_top = 32.0
+offset_right = -31.808044
+offset_bottom = -29.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+autowrap_mode = 3
