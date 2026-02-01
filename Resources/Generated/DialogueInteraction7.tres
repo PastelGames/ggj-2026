@@ -1,17 +1,98 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://q7ob3302x4y0"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dk52qytouyobi"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_8b0qk"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_7rp7x"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_7rp7x"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_scubl"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_igcpa"]
 
-[sub_resource type="Resource" id="Resource_8b0qk"]
-script = ExtResource("1_8b0qk")
-text = "Walk out with dignity."
-payload = "END_1_DIGNITY"
+[sub_resource type="Resource" id="Resource_y7rk7"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "Yes, I absolutely *did* read up on that paper!"
+
+[sub_resource type="Resource" id="Resource_i6qui"]
+script = ExtResource("1_7rp7x")
+speaker = "Interviewer"
+text = "Fantastic! What are your thoughts on *non-linear volatility compression*, and its value in the context of our company?"
+
+[sub_resource type="Resource" id="Resource_uc13w"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "Ah, the *non-linear volatility compression*, of course..."
+
+[sub_resource type="Resource" id="Resource_an1rx"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "(Deep breathes... Just a little improv session.)"
+
+[sub_resource type="Resource" id="Resource_63vi6"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "(I am  a *high-value*, *hyper-alpha*, finance bro... I am a *high-value*, *hyper-alpha*, ...)"
+
+[sub_resource type="Resource" id="Resource_nqfqa"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "I certainly think it's a fascinating piece of *cutting-edge technology* that will generate *synergy* on an unprecedented level."
+
+[sub_resource type="Resource" id="Resource_odn01"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "If RTN isn't looking at it as a *low-hanging fruit* for the industry, then we're missing the forest for the trees."
+
+[sub_resource type="Resource" id="Resource_4roqj"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "By integrating those frameworks, we can really leverage our *strategic advantage* and ultimately..."
+
+[sub_resource type="Resource" id="Resource_22jf0"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "(Pause for dramatic effect...)"
+
+[sub_resource type="Resource" id="Resource_4actf"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "...generate significant *shareholder value*."
+
+[sub_resource type="Resource" id="Resource_ha047"]
+script = ExtResource("1_7rp7x")
+speaker = "Interviewer"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_3ut7v"]
+script = ExtResource("1_7rp7x")
+speaker = "Doug"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_ypt2c"]
+script = ExtResource("1_7rp7x")
+speaker = "Interviewer"
+text = "Volatility compression isn't a technology..."
+
+[sub_resource type="Resource" id="Resource_7g7ni"]
+script = ExtResource("1_7rp7x")
+speaker = "Interviewer"
+text = "...but I guess if you *really* thought outside the box, we could call it that too."
+
+[sub_resource type="Resource" id="Resource_p2rir"]
+script = ExtResource("1_7rp7x")
+speaker = "Interviewer"
+text = "Huh, what a unique and authentic perspective! I’ve a feeling you’d be able to take on a lot of work for us!"
+
+[sub_resource type="Resource" id="Resource_qnpq7"]
+script = ExtResource("2_scubl")
+text = "Bow and curtsy."
+type = 1
+payload = "salary_negotiation"
+
+[sub_resource type="Resource" id="Resource_ipy02"]
+script = ExtResource("2_scubl")
+text = "Flash a confident wink."
+type = 1
+payload = "salary_negotiation"
 
 [resource]
-script = ExtResource("2_7rp7x")
-id = "negotiate_salary"
-dialogue = Array[String](["I've done my research. Industry standard is closer to 80K annually.
-", "Unfortunately, we don’t think you’re a match. We’re looking for candidates willing to dedicate themselves fully.
-"])
-responses = Array[ExtResource("1_8b0qk")]([SubResource("Resource_8b0qk")])
+script = ExtResource("3_igcpa")
+id = "shareholder_value"
+dialogue = Array[ExtResource("1_7rp7x")]([SubResource("Resource_y7rk7"), SubResource("Resource_i6qui"), SubResource("Resource_uc13w"), SubResource("Resource_an1rx"), SubResource("Resource_63vi6"), SubResource("Resource_nqfqa"), SubResource("Resource_odn01"), SubResource("Resource_4roqj"), SubResource("Resource_22jf0"), SubResource("Resource_4actf"), SubResource("Resource_ha047"), SubResource("Resource_3ut7v"), SubResource("Resource_ypt2c"), SubResource("Resource_7g7ni"), SubResource("Resource_p2rir")])
+responses = Array[ExtResource("2_scubl")]([SubResource("Resource_qnpq7"), SubResource("Resource_ipy02")])

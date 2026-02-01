@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://c02st46xi030m"]
 
-[node name="ResponsePanel" type="Panel" unique_id=1479755516]
-anchors_preset = -1
+[ext_resource type="Texture2D" uid="uid://cw516avxcwo3g" path="res://Imported/Images/confront.png" id="1_nmuoi"]
+[ext_resource type="Texture2D" uid="uid://dyugnedo7bkm6" path="res://Imported/Images/confront_hover.png" id="2_tjxbw"]
+
+[sub_resource type="Theme" id="Theme_3e7qp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvehl"]
+texture = ExtResource("1_nmuoi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnlro"]
+texture = ExtResource("2_tjxbw")
+
+[node name="ResponsePanel" type="Control" unique_id=1681136096]
+layout_mode = 3
 anchor_left = 0.055555556
 anchor_top = 0.6296296
 anchor_right = 0.9444444
@@ -11,15 +22,30 @@ metadata/_edit_use_anchors_ = true
 [node name="LeftOptionButton" type="Button" parent="." unique_id=134179843]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 16.0
+offset_top = -8.0
 offset_right = 504.0
 offset_bottom = 176.0
+theme = SubResource("Theme_3e7qp")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_rvehl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hnlro")
 text = "Left Option"
 
 [node name="RightOptionButton" type="Button" parent="." unique_id=512992686]
 layout_mode = 0
 offset_left = 536.0
-offset_top = 16.0
+offset_top = -8.0
 offset_right = 1000.0
 offset_bottom = 176.0
+theme = SubResource("Theme_3e7qp")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_rvehl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hnlro")
 text = "Right Option"
+
+[node name="ButtonBG" type="TextureRect" parent="." unique_id=1894260668]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,15 +1,91 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://b7erhgjhlirh0"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://kck8iligasur"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3rtlq"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_p6dvn"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_p6dvn"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_p1qca"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_fy7r3"]
 
-[sub_resource type="Resource" id="Resource_3rtlq"]
-script = ExtResource("1_3rtlq")
-text = "Continue interview"
+[sub_resource type="Resource" id="Resource_3xb3y"]
+script = ExtResource("1_p6dvn")
+speaker = "Narration"
+text = "11:08 AM."
+
+[sub_resource type="Resource" id="Resource_q6msp"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "(Why is no one here yet? Oh gosh, did I get the time wrong?)"
+
+[sub_resource type="Resource" id="Resource_65a8h"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Hi there! Apologies for the delay, we've been experiencing a high turnov..."
+
+[sub_resource type="Resource" id="Resource_npwt1"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Ahem, an increased need in personel, so we've been conducting *quite* a lot of interviews."
+
+[sub_resource type="Resource" id="Resource_ieyja"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Anyways, welcome to RTN Management. You are..."
+
+[sub_resource type="Resource" id="Resource_0udhu"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "I'm Doug, applying for the Associate Portfolio Manager position."
+
+[sub_resource type="Resource" id="Resource_c40c5"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Nice to meet you, Duck."
+
+[sub_resource type="Resource" id="Resource_tryih"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_3tju6"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "(...Duck?) (I said Doug, right? Is my enunciation that bad? Or maybe she misspoke.)"
+
+[sub_resource type="Resource" id="Resource_u12gh"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Duck's a fun name."
+
+[sub_resource type="Resource" id="Resource_ikdcy"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "Okay, she definitely said Duck."
+
+[sub_resource type="Resource" id="Resource_fw2oi"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "Should I correct her? But what if she takes it the wrong way and think I'm being difficult?"
+
+[sub_resource type="Resource" id="Resource_aioph"]
+script = ExtResource("1_p6dvn")
+speaker = "Doug"
+text = "I mean it's not a big deal, I guess. It sounds close enough... and I guess Duck *is* a fun-er name than plain old Doug. Should I just go by Duck from now on?"
+
+[sub_resource type="Resource" id="Resource_hm3do"]
+script = ExtResource("1_p6dvn")
+speaker = "Interviewer"
+text = "Duck? Is everything alright?"
+
+[sub_resource type="Resource" id="Resource_ggn3b"]
+script = ExtResource("2_p1qca")
+text = "Point out that you are not a duck."
+payload = "bullet_hell_1_nomask"
+
+[sub_resource type="Resource" id="Resource_i778h"]
+script = ExtResource("2_p1qca")
+text = "Avoid awkwardness. Pretend that you were Duck since birth."
 payload = "bullet_hell_1_mask"
 
 [resource]
-script = ExtResource("2_p6dvn")
-id = "accept_duck_name"
-dialogue = Array[String](["Sure. My name is Duck.", "You did your research. You rehearsed your lines.", "So. Tell me about yourself."])
-responses = Array[ExtResource("1_3rtlq")]([SubResource("Resource_3rtlq")])
+script = ExtResource("3_fy7r3")
+id = "mispronounced_name"
+dialogue = Array[ExtResource("1_p6dvn")]([SubResource("Resource_3xb3y"), SubResource("Resource_q6msp"), SubResource("Resource_65a8h"), SubResource("Resource_npwt1"), SubResource("Resource_ieyja"), SubResource("Resource_0udhu"), SubResource("Resource_c40c5"), SubResource("Resource_tryih"), SubResource("Resource_3tju6"), SubResource("Resource_u12gh"), SubResource("Resource_ikdcy"), SubResource("Resource_fw2oi"), SubResource("Resource_aioph"), SubResource("Resource_hm3do")])
+responses = Array[ExtResource("2_p1qca")]([SubResource("Resource_ggn3b"), SubResource("Resource_i778h")])

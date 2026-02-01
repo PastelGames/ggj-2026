@@ -1,14 +1,16 @@
-[gd_scene format=3 uid="uid://ws7nn8is1bno"]
+[gd_scene format=3 uid="uid://cemwom08sydd7"]
 
 [ext_resource type="Script" uid="uid://bi4apagilhfg8" path="res://Scripts/MusicManager.gd" id="1_iysw5"]
-[ext_resource type="AudioStream" uid="uid://cjr8tqo6hmlba" path="res://Imported/Music/Dungeon.wav" id="2_4y3dx"]
+[ext_resource type="AudioStream" uid="uid://ddh8lkjli0iqx" path="res://Imported/Music/Dungeon.mp3" id="2_4y3dx"]
 [ext_resource type="AudioStream" uid="uid://d1l0nxlfb31f0" path="res://Imported/Music/Intro.mp3" id="2_6b4sy"]
+[ext_resource type="AudioStream" uid="uid://3qkf6p730xlv" path="res://Imported/Music/Job_Interview.mp3" id="4_vdm7c"]
 
 [node name="MusicManager" type="Node" unique_id=150442177]
 script = ExtResource("1_iysw5")
-track_dictionary = Dictionary[String, AudioStream]({
+track_dictionary = Dictionary[String, AudioStreamMP3]({
 "Dungeon": ExtResource("2_4y3dx"),
-"Intro": ExtResource("2_6b4sy")
+"Intro": ExtResource("2_6b4sy"),
+"Job Interview": ExtResource("4_vdm7c")
 })
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1062827009]

@@ -1,22 +1,28 @@
 [gd_scene format=3 uid="uid://jvq3kxl6s8dv"]
 
-[ext_resource type="Texture2D" uid="uid://8v4c7abimhrw" path="res://Imported/Images/Character2PlaceholderThumbnail.png" id="1_ownjv"]
+[ext_resource type="Texture2D" uid="uid://cy2ke3ugdo7ix" path="res://Imported/Images/text dialgoue .png" id="1_w24x1"]
+[ext_resource type="Texture2D" uid="uid://b0k5crt5dojtm" path="res://Imported/Images/Icon Mac.PNG" id="2_w24x1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmm3w"]
+texture = ExtResource("1_w24x1")
+modulate_color = Color(1, 1, 1, 0.85)
 
 [node name="DialoguePanel" type="Panel" unique_id=1735828500]
 anchors_preset = -1
 anchor_left = 0.055555556
-anchor_top = 0.6296296
+anchor_top = 0.61728394
 anchor_right = 0.9444444
 anchor_bottom = 0.93364197
+theme_override_styles/panel = SubResource("StyleBoxTexture_cmm3w")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1216936534]
+[node name="SpeakerThumbnailTexture" type="TextureRect" parent="." unique_id=1216936534]
 layout_mode = 0
 anchor_left = 0.0546875
 anchor_top = 0.08121827
 anchor_right = 0.2109375
 anchor_bottom = 0.893401
-texture = ExtResource("1_ownjv")
+texture = ExtResource("2_w24x1")
 expand_mode = 4
 metadata/_edit_use_anchors_ = true
 
@@ -30,5 +36,6 @@ offset_left = 16.383987
 offset_top = 32.0
 offset_right = -31.808044
 offset_bottom = -29.0
+theme_override_colors/font_color = Color(0.21433741, 0.00014129985, 0.2725878, 1)
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 autowrap_mode = 3

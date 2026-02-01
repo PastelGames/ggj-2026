@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://d5dj2r3ehx37"]
+
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_bxbab"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_qveug"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_scyy1"]
+
+[sub_resource type="Resource" id="Resource_wh86b"]
+script = ExtResource("1_bxbab")
+speaker = "Doug"
+text = "That sounds good to me!"
+
+[sub_resource type="Resource" id="Resource_vjknw"]
+script = ExtResource("1_bxbab")
+speaker = "Interviewer"
+text = "Fantastic! In that case, can you start tomorrow at 8AM, Duck?"
+
+[sub_resource type="Resource" id="Resource_c5b7s"]
+script = ExtResource("2_qveug")
+text = "See you bright and early!"
+type = 1
+payload = "end_3_hired"
+
+[sub_resource type="Resource" id="Resource_pgltl"]
+script = ExtResource("2_qveug")
+text = "Can't wait until the morning!"
+type = 1
+payload = "end_4_hired_but"
+
+[resource]
+script = ExtResource("3_scyy1")
+id = "youre_hired"
+dialogue = Array[ExtResource("1_bxbab")]([SubResource("Resource_wh86b"), SubResource("Resource_vjknw")])
+responses = Array[ExtResource("2_qveug")]([SubResource("Resource_c5b7s"), SubResource("Resource_pgltl")])

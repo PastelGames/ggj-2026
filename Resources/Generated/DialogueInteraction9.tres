@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://yg5bjsskrebs"]
+
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_jh3cp"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_xc27d"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_5myc0"]
+
+[sub_resource type="Resource" id="Resource_7e4dj"]
+script = ExtResource("1_jh3cp")
+speaker = "Doug"
+text = "I've done a bit of research, and the average compensation for an Associate Portfolio Manager in this industry is 80K per year."
+
+[sub_resource type="Resource" id="Resource_vic38"]
+script = ExtResource("1_jh3cp")
+speaker = "Doug"
+text = "I'm afraid 100 cents per hour would be way below my desired salary."
+
+[sub_resource type="Resource" id="Resource_xwfqu"]
+script = ExtResource("2_xc27d")
+text = "And quite frankly, I find this insulting."
+type = 1
+payload = "end_1_dignity_intact"
+
+[sub_resource type="Resource" id="Resource_hp5f7"]
+script = ExtResource("2_xc27d")
+text = "Would you be open to raising your offer?"
+type = 1
+payload = "end_2_negotiator"
+
+[resource]
+script = ExtResource("3_5myc0")
+id = "advocate_your_worth"
+dialogue = Array[ExtResource("1_jh3cp")]([SubResource("Resource_7e4dj"), SubResource("Resource_vic38")])
+responses = Array[ExtResource("2_xc27d")]([SubResource("Resource_xwfqu"), SubResource("Resource_hp5f7")])

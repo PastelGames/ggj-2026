@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://ccuymjsg7k30s"]
+
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_6fm3j"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_xv2m2"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_s4aym"]
+
+[sub_resource type="Resource" id="Resource_nclmk"]
+script = ExtResource("1_6fm3j")
+speaker = "Doug"
+text = "Would you be open to match industry standard?"
+
+[sub_resource type="Resource" id="Resource_byn4h"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "You're asking to raise our offer from 100 cents per hour to 80K per annum?"
+
+[sub_resource type="Resource" id="Resource_mhk6h"]
+script = ExtResource("1_6fm3j")
+speaker = "Doug"
+text = "Yes."
+
+[sub_resource type="Resource" id="Resource_g3l0g"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "But that's a 813.242% increase."
+
+[sub_resource type="Resource" id="Resource_62n3l"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_dl5xc"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "Unfortunately, I don't think you are a match for our company."
+
+[sub_resource type="Resource" id="Resource_o467d"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "We're looking for candidates that are truly willing to dedicate themselves for our company mission, so we can exploi..."
+
+[sub_resource type="Resource" id="Resource_sxr2w"]
+script = ExtResource("1_6fm3j")
+speaker = "Interviewer"
+text = "Ahem, explore new avenues to minimize expenses and maximize profit."
+
+[sub_resource type="Resource" id="Resource_8wsfp"]
+script = ExtResource("1_6fm3j")
+speaker = "Doug"
+text = "Well in that case, thank you for your time and good luck with your search."
+
+[sub_resource type="Resource" id="Resource_knu02"]
+script = ExtResource("1_6fm3j")
+speaker = "Narration"
+text = "With that, you stand up from the office chair and walk out the room."
+
+[sub_resource type="Resource" id="Resource_mnoyj"]
+script = ExtResource("1_6fm3j")
+speaker = "Narration"
+text = "You didn't get the job. Your bank is still a tragedy."
+
+[sub_resource type="Resource" id="Resource_0c6re"]
+script = ExtResource("1_6fm3j")
+speaker = "Narration"
+text = "But as the elevator doors close on the 13th floor, you feel a rare, genuine spark of pride."
+
+[sub_resource type="Resource" id="Resource_rgo21"]
+script = ExtResource("1_6fm3j")
+speaker = "Narration"
+text = "You've dodged a bullet."
+
+[resource]
+script = ExtResource("3_s4aym")
+id = "end_2_negotiator"
+dialogue = Array[ExtResource("1_6fm3j")]([SubResource("Resource_nclmk"), SubResource("Resource_byn4h"), SubResource("Resource_mhk6h"), SubResource("Resource_g3l0g"), SubResource("Resource_62n3l"), SubResource("Resource_dl5xc"), SubResource("Resource_o467d"), SubResource("Resource_sxr2w"), SubResource("Resource_8wsfp"), SubResource("Resource_knu02"), SubResource("Resource_mnoyj"), SubResource("Resource_0c6re"), SubResource("Resource_rgo21")])

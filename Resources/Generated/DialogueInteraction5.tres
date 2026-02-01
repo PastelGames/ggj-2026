@@ -1,17 +1,136 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://drxbe2oxy6kf6"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://cgiswrlu3s2wl"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_of24d"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_cpoa5"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_cpoa5"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_jtrj4"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_2ehhv"]
 
-[sub_resource type="Resource" id="Resource_of24d"]
-script = ExtResource("1_of24d")
-text = "Continue"
+[sub_resource type="Resource" id="Resource_e8tbf"]
+script = ExtResource("1_cpoa5")
+speaker = "Interviewer"
+text = "Now then. Let's get started with the interview."
+
+[sub_resource type="Resource" id="Resource_fnug6"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Here we go. I did my research, I've read the \"Top Ten Common Interview Questions and How to Ace Them\" on the *Wall Street Diary*. I've prepped and rehearsed my lines.)"
+
+[sub_resource type="Resource" id="Resource_a14y7"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(She's going to ask, \"tell me about yourself.\")"
+
+[sub_resource type="Resource" id="Resource_uapds"]
+script = ExtResource("1_cpoa5")
+speaker = "Interviewer"
+text = "So. Tell me about yourself."
+
+[sub_resource type="Resource" id="Resource_febm6"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "Of course. I'm graduating this May with a degree in Performing Arts. I've got a lot of experience in managing portfolios..."
+
+[sub_resource type="Resource" id="Resource_lc6wm"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Okay, not too shabby! This is going exactly as I rehearsed.)"
+
+[sub_resource type="Resource" id="Resource_553sd"]
+script = ExtResource("1_cpoa5")
+speaker = "Interviewer"
+text = "Good, good. On to the next question..."
+
+[sub_resource type="Resource" id="Resource_ii1xu"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Phew, one down. She's probably going to ask about my strengths and weaknesses next.)"
+
+[sub_resource type="Resource" id="Resource_bfb5h"]
+script = ExtResource("1_cpoa5")
+speaker = "Interviewer"
+text = "Can you describe your strengths and weaknesses?"
+
+[sub_resource type="Resource" id="Resource_jdtqm"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "My greatest strength is adaptability. In a live performance, if the tech malfunctions or a line is dropped, the show must still go on."
+
+[sub_resource type="Resource" id="Resource_blchi"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "Thanks to this experience, I maintain a good performance even when I'm under pressure."
+
+[sub_resource type="Resource" id="Resource_kkk4c"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "But because I place such high value on presentation and 'getting it right,' my weakness is my tendency to over-edit myself."
+
+[sub_resource type="Resource" id="Resource_sgece"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "I'm working on it by establishing fair expectations for myself."
+
+[sub_resource type="Resource" id="Resource_es7qi"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Okay Doug, aced the delivery!)"
+
+[sub_resource type="Resource" id="Resource_vku4s"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(This is going so well. She's definitely going to ask about why I want to work here next.)"
+
+[sub_resource type="Resource" id="Resource_w7tbu"]
+script = ExtResource("1_cpoa5")
+speaker = "Interviewer"
+text = "Since you're interested in the Associate Portfolio Manager position at RTN, I believe you're read up on Dr. Bill Ionair's latest paper \"The Iterative Framework of Quantized Macro-Elasticity\"?"
+
+[sub_resource type="Resource" id="Resource_8fprr"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "Yes, I would like to work at..."
+
+[sub_resource type="Resource" id="Resource_bkvx5"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_n7jah"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(FUDGE. She's going off script!)"
+
+[sub_resource type="Resource" id="Resource_ym4mj"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Quantized...? Macro...elastic?? Is that like... stretchy physics???)"
+
+[sub_resource type="Resource" id="Resource_7lirx"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(God, what am I even doing here? Am I supposed to know all of this?)"
+
+[sub_resource type="Resource" id="Resource_hdwe7"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(If I say I don't know, she's going to think that I'm not enthusiastic enough about this job...)"
+
+[sub_resource type="Resource" id="Resource_waypw"]
+script = ExtResource("1_cpoa5")
+speaker = "Doug"
+text = "(Or worse... that I'm a total quack!)"
+
+[sub_resource type="Resource" id="Resource_j6ymd"]
+script = ExtResource("2_jtrj4")
+text = "Admit that you have no clue who Bill Ionair is or his paper."
+payload = "bullet_hell_2_nomask"
+
+[sub_resource type="Resource" id="Resource_nqs6s"]
+script = ExtResource("2_jtrj4")
+text = "Pretend you've done the reading."
 payload = "bullet_hell_2_mask"
 
 [resource]
-script = ExtResource("2_cpoa5")
-id = "fake_knowing_paper"
-dialogue = Array[String](["It's a cutting-edge technology that generates synergy and shareholder value.
-", "Oops — I meant that question for a Director-level candidate. But you seem very knowledgeable.
-"])
-responses = Array[ExtResource("1_of24d")]([SubResource("Resource_of24d")])
+script = ExtResource("3_2ehhv")
+id = "curveball_question"
+dialogue = Array[ExtResource("1_cpoa5")]([SubResource("Resource_e8tbf"), SubResource("Resource_fnug6"), SubResource("Resource_a14y7"), SubResource("Resource_uapds"), SubResource("Resource_febm6"), SubResource("Resource_lc6wm"), SubResource("Resource_553sd"), SubResource("Resource_ii1xu"), SubResource("Resource_bfb5h"), SubResource("Resource_jdtqm"), SubResource("Resource_blchi"), SubResource("Resource_kkk4c"), SubResource("Resource_sgece"), SubResource("Resource_es7qi"), SubResource("Resource_vku4s"), SubResource("Resource_w7tbu"), SubResource("Resource_8fprr"), SubResource("Resource_bkvx5"), SubResource("Resource_n7jah"), SubResource("Resource_ym4mj"), SubResource("Resource_7lirx"), SubResource("Resource_hdwe7"), SubResource("Resource_waypw")])
+responses = Array[ExtResource("2_jtrj4")]([SubResource("Resource_j6ymd"), SubResource("Resource_nqs6s")])

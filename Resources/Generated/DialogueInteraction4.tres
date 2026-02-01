@@ -1,16 +1,48 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dsvc1vxovdco8"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dnqdjxflsfdoh"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_jixo6"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_dkjdk"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_dkjdk"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_u4srs"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_fe86d"]
 
-[sub_resource type="Resource" id="Resource_jixo6"]
-script = ExtResource("1_jixo6")
-text = "Continue"
-payload = "bullet_hell_2_nomask"
+[sub_resource type="Resource" id="Resource_s8kr5"]
+script = ExtResource("1_dkjdk")
+speaker = "Interviewer"
+text = "Duck? Is everything alright?"
+
+[sub_resource type="Resource" id="Resource_sxud6"]
+script = ExtResource("1_dkjdk")
+speaker = "Doug"
+text = "Yeah, everything's alright! Yes, my name *is* Duck. Fun, right? Quack quack. Haha. Nice to meet you too."
+
+[sub_resource type="Resource" id="Resource_bsuua"]
+script = ExtResource("1_dkjdk")
+speaker = "Interviewer"
+text = "Haha."
+
+[sub_resource type="Resource" id="Resource_h2dj0"]
+script = ExtResource("1_dkjdk")
+speaker = "Interviewer"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_1wjsd"]
+script = ExtResource("1_dkjdk")
+speaker = "Interviewer"
+text = "Anyway, shall we continue?"
+
+[sub_resource type="Resource" id="Resource_2obxr"]
+script = ExtResource("2_u4srs")
+text = "Nod quietly."
+type = 1
+payload = "curveball_question"
+
+[sub_resource type="Resource" id="Resource_mrbnj"]
+script = ExtResource("2_u4srs")
+text = "Laugh at your own joke to fill the silence, then nod."
+type = 1
+payload = "curveball_question"
 
 [resource]
-script = ExtResource("2_dkjdk")
-id = "honest_about_paper"
-dialogue = Array[String](["I haven't heard of that technology.", "Oh, well that's fine. It's pretty new. Honestly that was more of a Director-level question.
-"])
-responses = Array[ExtResource("1_jixo6")]([SubResource("Resource_jixo6")])
+script = ExtResource("3_fe86d")
+id = "you_are_duck"
+dialogue = Array[ExtResource("1_dkjdk")]([SubResource("Resource_s8kr5"), SubResource("Resource_sxud6"), SubResource("Resource_bsuua"), SubResource("Resource_h2dj0"), SubResource("Resource_1wjsd")])
+responses = Array[ExtResource("2_u4srs")]([SubResource("Resource_2obxr"), SubResource("Resource_mrbnj")])

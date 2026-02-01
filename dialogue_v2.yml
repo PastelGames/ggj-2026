@@ -1,0 +1,529 @@
+interactions:
+  - interaction_id: intro_scene
+
+    dialogue:
+      - speaker: Narration
+        text: 10:34 AM, Monday.
+      
+      - speaker: Narration
+        text: After a hundred of resumes sent into the void, dozens of automated rejection letters, and more-than-enough ghostings by recruiters, you're finally here in the corner of an empty bathroom on the 13th floor of RTN Management, awaiting the final round interview.
+
+      - speaker: Narration
+        text: The fluorescent lights hum with a clinical brightness, a little *too* bright to be comfortable.
+        
+      - speaker: Narration
+        text: You look at yourself in the mirror, getting ready for the job interview.
+
+    responses:
+      - type: goto_dialogue
+        text: Practice your super professional "I-am-an-adult" smile.
+        payload: intro_scene_continued
+
+      - type: goto_dialogue
+        text: Wiggle and do a little dance to release tension.
+        payload: intro_scene_continued
+
+  - interaction_id: intro_scene_continued
+
+    dialogue:
+      - speaker: Doug
+        text: Okay, deep breathes. All you have to do is speak clearly, maintain eye contact, and smile!
+      
+      - speaker: Doug
+        text: It's no different than reading a script. And just a tiny bit of improv.
+      
+      - speaker: Doug
+        text: Don't think about paying rent, and definitely don't think about eviction.
+
+      - speaker: Doug
+        text: You've got this, Doug. I've got this.
+
+    responses:
+      - type: goto_dialogue
+        text: I'm ready.
+        payload: mispronounced_name
+
+      - type: goto_dialogue
+        text: I'm ready! (Smile one last time.)
+        payload: mispronounced_name
+
+  - interaction_id: mispronounced_name
+
+    dialogue:
+      - speaker: Narration
+        text: 11:08 AM.
+      
+      - speaker: Doug
+        text: (Why is no one here yet? Oh gosh, did I get the time wrong?)
+      
+      - speaker: Interviewer
+        text: Hi there! Apologies for the delay, we've been experiencing a high turnov...
+
+      - speaker: Interviewer
+        text: Ahem, an increased need in personel, so we've been conducting *quite* a lot of interviews.
+
+      - speaker: Interviewer
+        text: Anyways, welcome to RTN Management. You are...
+
+      - speaker: Doug
+        text: I'm Doug, applying for the Associate Portfolio Manager position.
+
+      - speaker: Interviewer
+        text: Nice to meet you, Duck.
+
+      - speaker: Doug
+        text: ...
+
+      - speaker: Doug
+        text: (...Duck?) (I said Doug, right? Is my enunciation that bad? Or maybe she misspoke.)
+
+      - speaker: Interviewer
+        text: Duck's a fun name.
+
+      - speaker: Doug
+        text: Okay, she definitely said Duck.
+
+      - speaker: Doug
+        text: Should I correct her? But what if she takes it the wrong way and think I'm being difficult?
+
+      - speaker: Doug
+        text: I mean it's not a big deal, I guess. It sounds close enough... and I guess Duck *is* a fun-er name than plain old Doug. Should I just go by Duck from now on?
+      
+      - speaker: Interviewer
+        text: Duck? Is everything alright?
+
+    responses:
+      - type: start_bullet_hell
+        text: Point out that you are not a duck.
+        payload: bullet_hell_1_nomask
+
+      - type: start_bullet_hell
+        text: Avoid awkwardness. Pretend that you were Duck since birth.
+        payload: bullet_hell_1_mask
+
+  - interaction_id: correct_name
+
+    dialogue:
+      - speaker: Interviewer
+        text: Duck? Is everything alright?
+      
+      - speaker: Doug
+        text: My name is actually pronounced Doug. As in, "I 'dug' myself in a hole." Or as in Douglas.
+      
+      - speaker: Interviewer
+        text: Oh my apologies! It's definitely not because I didn't read your resume beforehand, haha.
+
+      - speaker: Doug
+        text: ...
+
+      - speaker: Interviewer
+        text: That was a joke. I've just been overworked and deathly busy conducting so many interviews. I just got confused who I'm interviewing.
+
+      - speaker: Interviewer
+        text: Anyway, shall we continue?
+
+    responses:
+      - type: goto_dialogue
+        text: Nod.
+        payload: curveball_question
+
+      - type: goto_dialogue
+        text: Smile politely at the joke, then nod.
+        payload: curveball_question
+
+  - interaction_id: you_are_duck
+
+    dialogue:
+      - speaker: Interviewer
+        text: Duck? Is everything alright?
+      
+      - speaker: Doug
+        text: Yeah, everything's alright! Yes, my name *is* Duck. Fun, right? Quack quack. Haha. Nice to meet you too.
+      
+      - speaker: Interviewer
+        text: Haha.
+
+      - speaker: Interviewer
+        text: ...
+
+      - speaker: Interviewer
+        text: Anyway, shall we continue?
+
+    responses:
+      - type: goto_dialogue
+        text: Nod quietly.
+        payload: curveball_question
+
+      - type: goto_dialogue
+        text: Laugh at your own joke to fill the silence, then nod.
+        payload: curveball_question
+  
+
+  - interaction_id: curveball_question
+
+    dialogue:
+      - speaker: Interviewer
+        text: Now then. Let's get started with the interview.
+      
+      - speaker: Doug
+        text: (Here we go. I did my research, I've read the "Top Ten Common Interview Questions and How to Ace Them" on the *Wall Street Diary*. I've prepped and rehearsed my lines.)
+
+      - speaker: Doug
+        text: (She's going to ask, "tell me about yourself.")
+      
+      - speaker: Interviewer
+        text: So. Tell me about yourself.
+
+      - speaker: Doug
+        text: Of course. I'm graduating this May with a degree in Performing Arts. I've got a lot of experience in managing portfolios...
+
+      - speaker: Doug
+        text: (Okay, not too shabby! This is going exactly as I rehearsed.)
+      
+      - speaker: Interviewer
+        text: Good, good. On to the next question...
+
+      - speaker: Doug
+        text: (Phew, one down. She's probably going to ask about my strengths and weaknesses next.)
+
+      - speaker: Interviewer
+        text: Can you describe your strengths and weaknesses?
+
+      - speaker: Doug
+        text: My greatest strength is adaptability. In a live performance, if the tech malfunctions or a line is dropped, the show must still go on.
+
+      - speaker: Doug
+        text: Thanks to this experience, I maintain a good performance even when I'm under pressure.
+
+      - speaker: Doug
+        text: But because I place such high value on presentation and 'getting it right,' my weakness is my tendency to over-edit myself.
+
+      - speaker: Doug
+        text: I'm working on it by establishing fair expectations for myself.
+
+      - speaker: Doug
+        text: (Okay Doug, aced the delivery!)
+
+      - speaker: Doug
+        text: (This is going so well. She's definitely going to ask about why I want to work here next.)
+
+      - speaker: Interviewer
+        text: Since you're interested in the Associate Portfolio Manager position at RTN, I believe you're read up on Dr. Bill Ionair's latest paper "The Iterative Framework of Quantized Macro-Elasticity"?
+
+      - speaker: Doug
+        text: Yes, I would like to work at...
+
+      - speaker: Doug
+        text: ...
+
+      - speaker: Doug
+        text: (FUDGE. She's going off script!)
+
+      - speaker: Doug
+        text: (Quantized...? Macro...elastic?? Is that like... stretchy physics???)
+
+      - speaker: Doug
+        text: (God, what am I even doing here? Am I supposed to know all of this?)
+
+      - speaker: Doug
+        text: (If I say I don't know, she's going to think that I'm not enthusiastic enough about this job...)
+
+      - speaker: Doug
+        text: (Or worse... that I'm a total quack!)
+        
+    responses:
+      - type: start_bullet_hell
+        text: Admit that you have no clue who Bill Ionair is or his paper.
+        payload: bullet_hell_2_nomask
+
+      - type: start_bullet_hell
+        text: Pretend you've done the reading.
+        payload: bullet_hell_2_mask
+
+  - interaction_id: who_is_bill_ionair
+
+    dialogue:
+      - speaker: Doug
+        text: Actually, to be completely honest, I've never heard of... Quantified...
+        
+      - speaker: Doug
+        text: ...Macaroni-Plasticity.
+              
+      - speaker: Interviewer
+        text: Oh...!
+
+      - speaker: Interviewer
+        text: Well I guess that’s fine. It’s a pretty new and obscure field.
+ 
+      - speaker: Interviewer
+        text: And to be fair, this question was a Director-level question.
+    
+    responses:
+      - type: goto_dialogue
+        text: "Sure...?"
+        payload: salary_negotiation
+
+      - type: goto_dialogue
+        text: "Sure...!"
+        payload: salary_negotiation
+
+  - interaction_id: shareholder_value
+
+    dialogue:
+      - speaker: Doug
+        text: Yes, I absolutely *did* read up on that paper!
+        
+      - speaker: Interviewer
+        text: Fantastic! What are your thoughts on *non-linear volatility compression*, and its value in the context of our company?
+              
+      - speaker: Doug
+        text: Ah, the *non-linear volatility compression*, of course...
+
+      - speaker: Doug
+        text: (Deep breathes... Just a little improv session.)
+
+      - speaker: Doug
+        text: (I am  a *high-value*, *hyper-alpha*, finance bro... I am a *high-value*, *hyper-alpha*, ...)
+ 
+      - speaker: Doug
+        text: I certainly think it's a fascinating piece of *cutting-edge technology* that will generate *synergy* on an unprecedented level.
+
+      - speaker: Doug
+        text: If RTN isn't looking at it as a *low-hanging fruit* for the industry, then we're missing the forest for the trees.
+
+      - speaker: Doug
+        text: By integrating those frameworks, we can really leverage our *strategic advantage* and ultimately...
+
+      - speaker: Doug
+        text: (Pause for dramatic effect...)
+  
+      - speaker: Doug
+        text: ...generate significant *shareholder value*.
+
+      - speaker: Interviewer
+        text: ...
+
+      - speaker: Doug
+        text: ...
+
+      - speaker: Interviewer
+        text: Volatility compression isn't a technology...
+  
+      - speaker: Interviewer
+        text: ...but I guess if you *really* thought outside the box, we could call it that too.
+
+      - speaker: Interviewer
+        text: Huh, what a unique and authentic perspective! I’ve a feeling you’d be able to take on a lot of work for us!
+
+    responses:
+      - type: goto_dialogue
+        text: Bow and curtsy.
+        payload: salary_negotiation
+
+      - type: goto_dialogue
+        text: Flash a confident wink.
+        payload: salary_negotiation
+        
+  
+  - interaction_id: salary_negotiation
+
+    dialogue:
+      - speaker: Interviewer
+        text: Okay now for the *good* part... Let's discuss salaries and benefits! 
+        
+      - speaker: Interviewer
+        text: If we decide to go forward with you, we'd like to offer 100 as a starting salary.
+              
+      - speaker: Doug
+        text: Wow, a 100K salary?
+
+      - speaker: Interviewer
+        text: Haha!
+
+      - speaker: Interviewer
+        text: ...
+ 
+      - speaker: Doug
+        text: ...
+
+      - speaker: Interviewer
+        text: No, we meant 100 cents hourly.
+
+      - speaker: Doug
+        text: (100 cents...hourly? That's got to be a joke!)
+
+      - speaker: Doug
+        text: ..Haha, that's a good one!
+  
+      - speaker: Interviewer
+        text: Indeed, a great offer. Here at RTN, we pride ourselves on our generosity.
+
+      - speaker: Doug
+        text: (...Oh god, she means it.)
+
+      - speaker: Doug
+        text: (100 cents hourly... That's $8 a day if I don't eat lunch... $40 a week...)
+
+      - speaker: Doug
+        text: (I can't even buy a week's worth of groceries from Trader Woe's, much less pay my rent!)
+  
+      - speaker: Doug
+        text: (What if I negotiate and ask for minimum wage? Would I jeapordize my chances of getting this job?)
+
+      - speaker: Doug
+        text: (Will I stay unemployed for life?)
+
+      - speaker: Doug
+        text: (Ugh, maybe $8 a day is better than earning nothing at all.)
+
+      - speaker: Doug
+        text: (After all, they say you get paid with experience when you're young... right? Right!?)
+
+
+      - speaker: Interviewer
+        text: Ahem. So, does our offer sound good to you?
+
+    responses:
+      - type: start_bullet_hell
+        text: Negotiate your worth.
+        payload: bullet_hell_3_nomask
+
+      - type: start_bullet_hell
+        text: Smile, nod, and accept the offer.
+        payload: bullet_hell_3_mask
+
+  - interaction_id: advocate_your_worth
+
+    dialogue:
+      - speaker: Doug
+        text: I've done a bit of research, and the average compensation for an Associate Portfolio Manager in this industry is 80K per year.
+        
+      - speaker: Doug
+        text: I'm afraid 100 cents per hour would be way below my desired salary.
+    
+    responses:
+      - type: goto_dialogue
+        text: "And quite frankly, I find this insulting."
+        payload: end_1_dignity_intact
+
+      - type: goto_dialogue
+        text: "Would you be open to raising your offer?"
+        payload: end_2_negotiator
+
+  - interaction_id: end_1_dignity_intact
+
+    dialogue:
+      - speaker: Doug
+        text: And quite frankly, I find this insulting.
+        
+      - speaker: Interviewer
+        text: ...Insulting?
+
+      - speaker: Doug
+        text: You can't get my name right, you scout for skills that goes well beyond the job description, and you pay a dollar an hour?
+    
+      - speaker: Doug
+        text: You guys must be violating *some* law. How is this company still running?
+
+      - speaker: Narration
+        text: With that, you stand up from the ugly office chair they offered you.
+  
+      - speaker: Doug
+        text: You're welcome for my time, and good luck with your search.
+ 
+      - speaker: Doug
+        text: (Mic drop...!)
+
+      - speaker: Narration
+        text: You walk out of the office room, without a job, without a pay.
+
+      - speaker: Narration
+        text: But as the elevator doors close on the 13th floor, you feel a rare, genuine spark of pride.
+
+      - speaker: Narration
+        text: You may have gone horribly off-script, but you just gave the best performance in your life. 
+        
+  - interaction_id: end_2_negotiator
+
+    dialogue:
+      - speaker: Doug
+        text: Would you be open to match industry standard?
+        
+      - speaker: Interviewer
+        text: You're asking to raise our offer from 100 cents per hour to 80K per annum?
+
+      - speaker: Doug
+        text: Yes.
+    
+      - speaker: Interviewer
+        text: But that's a 813.242% increase.
+
+      - speaker: Interviewer
+        text: ...
+
+      - speaker: Interviewer
+        text: Unfortunately, I don't think you are a match for our company. 
+ 
+      - speaker: Interviewer
+        text: We're looking for candidates that are truly willing to dedicate themselves for our company mission, so we can exploi...
+
+      - speaker: Interviewer
+        text: Ahem, explore new avenues to minimize expenses and maximize profit.
+
+      - speaker: Doug
+        text: Well in that case, thank you for your time and good luck with your search.
+
+      - speaker: Narration
+        text: With that, you stand up from the office chair and walk out the room.
+
+      - speaker: Narration
+        text: You didn't get the job. Your bank is still a tragedy.
+
+      - speaker: Narration
+        text: But as the elevator doors close on the 13th floor, you feel a rare, genuine spark of pride.
+
+      - speaker: Narration
+        text: You've dodged a bullet.
+
+  - interaction_id: youre_hired
+
+    dialogue:
+      - speaker: Doug
+        text: That sounds good to me!
+        
+      - speaker: Interviewer
+        text: Fantastic! In that case, can you start tomorrow at 8AM, Duck?
+    
+    responses:
+      - type: goto_dialogue
+        text: "See you bright and early!"
+        payload: end_3_hired
+
+      - type: goto_dialogue
+        text: "Can't wait until the morning!"
+        payload: end_4_hired_but
+
+  - interaction_id: end_3_hired
+
+    dialogue:
+      - speaker: Doug
+        text: See you bright and early!
+        
+      - speaker: Narration
+        text: And thus began your days as a corporate pawn, a cog in the wheel, the "Exemplery Employee of the Year." You are given work that is beyond your skill level and *definitely* above your pay grade.
+ 
+      - speaker: Narration
+        text: And yes, you must go by Duck for the rest of your corporate days.
+
+
+  - interaction_id: end_4_hired_but
+
+    dialogue:
+      - speaker: Doug
+        text: See you bright and early!
+        
+      - speaker: Narration
+        text: And thus began your days as a corporate pawn, a cog in the wheel, the "Exemplery Employee of the Year." You are given work that is beyond your skill level and *definitely* above your pay grade.
+ 
+      - speaker: Narration
+        text: And yes, you must go by Duck for the rest of your corporate days.

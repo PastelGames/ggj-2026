@@ -1,23 +1,48 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://c6c08r4554snm"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dr0qveypoljqw"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_2edps"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_8by33"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_8by33"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_plcft"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_d2a2x"]
 
-[sub_resource type="Resource" id="Resource_2edps"]
-script = ExtResource("1_2edps")
-text = "That's below my desired salary."
+[sub_resource type="Resource" id="Resource_4m58n"]
+script = ExtResource("1_8by33")
+speaker = "Doug"
+text = "Actually, to be completely honest, I've never heard of... Quantified..."
+
+[sub_resource type="Resource" id="Resource_ox701"]
+script = ExtResource("1_8by33")
+speaker = "Doug"
+text = "...Macaroni-Plasticity."
+
+[sub_resource type="Resource" id="Resource_ss2lk"]
+script = ExtResource("1_8by33")
+speaker = "Interviewer"
+text = "Oh...!"
+
+[sub_resource type="Resource" id="Resource_wx8jv"]
+script = ExtResource("1_8by33")
+speaker = "Interviewer"
+text = "Well I guess that’s fine. It’s a pretty new and obscure field."
+
+[sub_resource type="Resource" id="Resource_yr82v"]
+script = ExtResource("1_8by33")
+speaker = "Interviewer"
+text = "And to be fair, this question was a Director-level question."
+
+[sub_resource type="Resource" id="Resource_5x3wo"]
+script = ExtResource("2_plcft")
+text = "Sure...?"
 type = 1
-payload = "negotiate_salary"
+payload = "salary_negotiation"
 
-[sub_resource type="Resource" id="Resource_8by33"]
-script = ExtResource("1_2edps")
-text = "That sounds good to me!"
+[sub_resource type="Resource" id="Resource_bput0"]
+script = ExtResource("2_plcft")
+text = "Sure...!"
 type = 1
-payload = "accept_salary"
+payload = "salary_negotiation"
 
 [resource]
-script = ExtResource("2_8by33")
-id = "salary_offer"
-dialogue = Array[String](["We'd like to offer you 100 for the position.
-", "100K?", "No. 100 cents per hour.", "Does that sound good to you?"])
-responses = Array[ExtResource("1_2edps")]([SubResource("Resource_2edps"), SubResource("Resource_8by33")])
+script = ExtResource("3_d2a2x")
+id = "who_is_bill_ionair"
+dialogue = Array[ExtResource("1_8by33")]([SubResource("Resource_4m58n"), SubResource("Resource_ox701"), SubResource("Resource_ss2lk"), SubResource("Resource_wx8jv"), SubResource("Resource_yr82v")])
+responses = Array[ExtResource("2_plcft")]([SubResource("Resource_5x3wo"), SubResource("Resource_bput0")])
