@@ -112,7 +112,7 @@ tile_proxies/coords_level = [[0, Vector2i(0, 1)], [3, Vector2i(0, 1)], [0, Vecto
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5og7"]
 size = Vector2(235, 188)
 
-[node name="Level01" type="Node2D" unique_id=1734630317 groups=["level_manager", "player"]]
+[node name="Level01" type="Node2D" unique_id=1734630317 groups=["level_manager"]]
 script = ExtResource("1_ns8yt")
 player_scene = ExtResource("2_mm1wh")
 enemy_scene = ExtResource("3_svqvh")

@@ -1,8 +1,5 @@
 extends BulletHellManager
 
-signal on_fail
-signal on_success
-
 @export var player_scene: PackedScene
 @export var enemy_scene: PackedScene
 @export var fixed_enemy: PackedScene
