@@ -6,9 +6,9 @@ signal died
 #@export var acceleration = 1000.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
-@export var shot_cd = 0.10
+@export var shot_cd = 0.40
 @export var strength = 1
-@export var bullet_speed = 600.0
+@export var bullet_speed = 800.0
 @export var max_hp = 10
 @export var acceleration = 1000
 @export var friction = 1000

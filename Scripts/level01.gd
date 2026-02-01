@@ -1,8 +1,12 @@
-extends Node2D
+extends BulletHellManager
+
+signal game_over
+signal success
 
 @export var player_scene: PackedScene
 @export var enemy_scene: PackedScene
 @export var fixed_enemy: PackedScene
+@export var player_lives = 1
 
 var bullet_parent: Node = null
 var player_location: Vector2 = Vector2.ZERO
@@ -27,9 +31,9 @@ func _ready() -> void:
 	# For testing
 	_initialize(null)
 	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
-	$EnemySpawnTimer.start()
+	$EnemySpawnTimer.start(2)
 	$DifficultyTimer.timeout.connect(_difficulty_increase)
-	$DifficultyTimer.start()
+	$DifficultyTimer.start(10)
 	_spawn_fixed()
 
 func _spawn_player(buffs: BuffData) -> void:
@@ -53,7 +57,12 @@ func _spawn_enemy() -> void:
 		shooter.bullet_container_path = bullets_enemy.get_path()
 
 func _on_player_died() -> void:
-	get_tree().reload_current_scene()
+	if player_lives < 1:
+		emit_signal("game_over")
+	player_lives -= 1
+	
+func _on_success() -> void:
+	emit_signal("success")
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("pause"):
@@ -62,8 +71,8 @@ func _process(delta: float) -> void:
 		get_node("CanvasLayer/PausePanel").show()
 		
 func _difficulty_increase() -> void:
-	if ($EnemySpawnTimer.wait_time > 1.0):
-		$EnemySpawnTimer.wait_time -= 0.5
+	if ($EnemySpawnTimer.wait_time > 0.3):
+		$EnemySpawnTimer.wait_time -= 0.1
 		
 func _spawn_fixed() -> void:
 	var e := fixed_enemy.instantiate()

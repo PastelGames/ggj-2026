@@ -57,3 +57,4 @@ autostart = true
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1511550858]
+zoom = Vector2(2, 2)
