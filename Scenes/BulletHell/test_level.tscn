@@ -8,7 +8,7 @@
 [node name="TestLevel" type="Node2D" unique_id=1734630317]
 script = ExtResource("1_84f7r")
 player_scene = ExtResource("2_t7sc5")
-enemy_scene = ExtResource("3_uj73r")
+enemy_scene = ExtResource("3_t7sc5")
 
 [node name="PlayerSpawn" type="Marker2D" parent="." unique_id=286454880]
 position = Vector2(100, 100)
