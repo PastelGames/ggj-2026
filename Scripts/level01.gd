@@ -25,11 +25,12 @@ func _physics_process(delta: float) -> void:
 		player_location = player.global_position
 
 func _initialize(buffs: BuffData) -> void:
+	super._initialize(buffs)
 	_spawn_player(buffs)
 	
 func _ready() -> void:
 	# For testing
-	_initialize(null)
+	#_initialize(null)
 	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
 	$EnemySpawnTimer.start(2)
 	$DifficultyTimer.timeout.connect(_difficulty_increase)
