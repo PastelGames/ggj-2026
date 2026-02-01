@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://8v4c7abimhrw" path="res://Imported/Images/Character2PlaceholderThumbnail.png" id="1_ownjv"]
 
-[node name="Panel" type="Panel" unique_id=1735828500]
+[node name="DialoguePanel" type="Panel" unique_id=1735828500]
 anchors_preset = -1
 anchor_left = 0.055555556
 anchor_top = 0.6296296

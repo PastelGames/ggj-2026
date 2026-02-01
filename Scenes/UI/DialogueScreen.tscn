@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cx4fsol56pjdq"]
+
+[ext_resource type="Script" uid="uid://wk7sb46s14qe" path="res://Scripts/DialogueManager.gd" id="1_fkcqv"]
+[ext_resource type="Resource" uid="uid://b1b2hwpwrrlpb" path="res://Resources/DialogueInteraction1.tres" id="2_1w131"]
+[ext_resource type="Texture2D" uid="uid://cwa3i6i60pdmj" path="res://Imported/Images/Character1Placeholder.png" id="2_fkup6"]
+[ext_resource type="Texture2D" uid="uid://ctprhhyoyjok5" path="res://Imported/Images/Character2Placeholder.png" id="3_uapj3"]
+[ext_resource type="PackedScene" uid="uid://c02st46xi030m" path="res://Scenes/UI/ResponsePanel.tscn" id="4_vxibi"]
+[ext_resource type="PackedScene" uid="uid://jvq3kxl6s8dv" path="res://Scenes/UI/DialoguePanel.tscn" id="5_1w131"]
+[ext_resource type="Script" uid="uid://csehspa8mqgcy" path="res://Scenes/UI/DialogueState.gd" id="6_uapj3"]
+[ext_resource type="Script" uid="uid://cycvr5oha7lc6" path="res://Scenes/UI/ResponseState.gd" id="7_uapj3"]
+
+[sub_resource type="GDScript" id="GDScript_vxibi"]
+script/source = "extends Button
+
+var response: ResponseData
+"
+
+[node name="DialogueScreen" type="CanvasLayer" unique_id=1680501496 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("1_fkcqv")
+_dialogue_interaction_data = ExtResource("2_1w131")
+initial_state = NodePath("DialogueState")
+
+[node name="Character1TextureRect" type="TextureRect" parent="." unique_id=1472064666]
+anchors_preset = -1
+anchor_right = 0.402
+anchor_bottom = 0.99700004
+offset_right = -0.104003906
+offset_bottom = -0.056030273
+texture = ExtResource("2_fkup6")
+expand_mode = 1
+flip_h = true
+
+[node name="Character2TextureRect" type="TextureRect" parent="." unique_id=804761683]
+anchors_preset = -1
+anchor_left = 0.5980903
+anchor_top = 0.0030864198
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(-468, 244)
+texture = ExtResource("3_uapj3")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DialoguePanel" parent="." unique_id=1735828500 instance=ExtResource("5_1w131")]
+
+[node name="ResponsePanel" parent="." unique_id=1479755516 instance=ExtResource("4_vxibi")]
+
+[node name="LeftOptionButton" parent="ResponsePanel" index="0" unique_id=134179843]
+script = SubResource("GDScript_vxibi")
+
+[node name="RightOptionButton" parent="ResponsePanel" index="1" unique_id=512992686]
+script = SubResource("GDScript_vxibi")
+
+[node name="DialogueState" type="Node" parent="." unique_id=1070159520]
+script = ExtResource("6_uapj3")
+metadata/_custom_type_script = "uid://bnw6rajrtbx80"
+
+[node name="ResponseState" type="Node" parent="." unique_id=1197424896]
+script = ExtResource("7_uapj3")
+metadata/_custom_type_script = "uid://bnw6rajrtbx80"
+
+[connection signal="button_down" from="ResponsePanel/LeftOptionButton" to="." method="on_left_option_selected"]
+[connection signal="button_down" from="ResponsePanel/RightOptionButton" to="." method="on_right_option_selected"]
+
+[editable path="DialoguePanel"]
+[editable path="ResponsePanel"]

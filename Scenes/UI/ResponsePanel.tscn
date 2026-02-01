@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c02st46xi030m"]
 
-[node name="DialogueChoosingPanel" type="Panel" unique_id=1479755516]
+[node name="ResponsePanel" type="Panel" unique_id=1479755516]
 anchors_preset = -1
 anchor_left = 0.055555556
 anchor_top = 0.6296296
