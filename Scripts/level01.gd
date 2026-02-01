@@ -16,18 +16,24 @@ var player: Node = null
 @onready var enemies: Node2D = $EnemyContainer
 
 func _physics_process(delta: float) -> void:
-	player_location = player.global_position
+	if player:
+		player_location = player.global_position
 
+func _initialize(buffs: BuffData) -> void:
+	_spawn_player(buffs)
+	
 func _ready() -> void:
-	_spawn_player()
+	# For testing
+	#_initialize(null)
 	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
 	$EnemySpawnTimer.start()
 	$DifficultyTimer.timeout.connect(_difficulty_increase)
 	$DifficultyTimer.start()
 
-func _spawn_player() -> void:
+func _spawn_player(buffs: BuffData) -> void:
 	var p := player_scene.instantiate()
 	player = p
+	p.apply_buff(buffs)
 	add_child(p)
 	p.global_position = player_spawn.global_position
 	p.bullet_parent = bullets_player

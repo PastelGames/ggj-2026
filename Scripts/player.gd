@@ -101,7 +101,8 @@ func apply_buff(input_buff_data : BuffData) -> void:
 	var extra_speed = 100
 	var extra_strength = 1
 	var extra_hp = 1
-	
+	if not input_buff_data:
+		return
 	if input_buff_data.BuffName == "speed":
 		speed = speed + extra_speed * input_buff_data.BuffAmount
 		if input_buff_data.BuffDuration > 0:
