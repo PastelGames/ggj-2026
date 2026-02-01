@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bqm1spqlwuemo"]
+
+[ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://Scripts/bullet.gd" id="1_tp7ih"]
+[ext_resource type="Texture2D" uid="uid://3xoxi1d3g6ff" path="res://Bullet .png" id="2_ksn77"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ltkup"]
+radius = 3.0
+height = 17.771244
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jv2oq"]
+radius = 3.0
+height = 16.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1962098920 groups=["player_bullets"]]
+collision_layer = 4
+collision_mask = 16
+script = ExtResource("1_tp7ih")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1942737031]
+scale = Vector2(0.029, 0.031)
+texture = ExtResource("2_ksn77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2099882219]
+position = Vector2(1, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ltkup")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1717508762 groups=["player_bullets"]]
+position = Vector2(1, -1)
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1197778773]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_jv2oq")
