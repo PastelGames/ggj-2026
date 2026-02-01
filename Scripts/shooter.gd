@@ -35,4 +35,3 @@ func _fire_one() -> void:
 	b.speed = bullet_speed
 	b.direction = direction
 	b.damage = bullet_damage
-

@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 signal died
 
-@export var friction = 1000.0
-@export var acceleration = 1000.0
+#@export var friction = 1000.0
+#@export var acceleration = 1000.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
 @export var shot_cd = 0.10
