@@ -1,0 +1,43 @@
+interactions:
+
+  - interaction_id: office_intro
+
+    dialogue:
+      - speaker: Narration
+        text: At the office.
+      - speaker: Doug
+        text: Why is no one here yet? Wait, did I get the time wrong?
+
+      - speaker: Interviewer
+        text: >
+          Hi... apologies for the delay, we've been experiencing a high turnov...
+          ahem, an increased need in personnel, so we've been conducting so many interviews.
+
+      - speaker: Doug
+        text: No worries, I wasn't waiting for too long.
+
+      - speaker: Interviewer
+        text: You are...
+
+      - speaker: Doug
+        text: I'm Doug. Applying for the Associate position.
+
+      - speaker: Interviewer
+        text: I'm xyz. You're uh... Duck, right? Nice to meet you.
+
+      - speaker: Narration
+        text: Doug's a pretty common name... right?
+
+      - speaker: Interviewer
+        text: Duck's a fun name.
+
+    responses:
+      - type: goto_dialogue
+        text: Correct her. My name is Doug.
+        payload: correct_name
+
+      - type: goto_dialogue
+        text: Let it slide. Go by Duck.
+        payload: accept_duck_name
+
+
