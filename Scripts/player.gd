@@ -10,6 +10,8 @@ signal died
 @export var strength = 1
 @export var bullet_speed = 600.0
 @export var max_hp = 10
+@export var acceleration = 1000
+@export var friction = 1000
 
 var in_rage = false
 var hp

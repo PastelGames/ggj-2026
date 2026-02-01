@@ -2,6 +2,7 @@ extends Node2D
 
 @export var player_scene: PackedScene
 @export var enemy_scene: PackedScene
+@export var fixed_enemy: PackedScene
 
 var bullet_parent: Node = null
 var player_location: Vector2 = Vector2.ZERO
@@ -24,11 +25,12 @@ func _initialize(buffs: BuffData) -> void:
 	
 func _ready() -> void:
 	# For testing
-	#_initialize(null)
+	_initialize(null)
 	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
 	$EnemySpawnTimer.start()
 	$DifficultyTimer.timeout.connect(_difficulty_increase)
 	$DifficultyTimer.start()
+	_spawn_fixed()
 
 func _spawn_player(buffs: BuffData) -> void:
 	var p := player_scene.instantiate()
@@ -62,3 +64,9 @@ func _process(delta: float) -> void:
 func _difficulty_increase() -> void:
 	if ($EnemySpawnTimer.wait_time > 1.0):
 		$EnemySpawnTimer.wait_time -= 0.5
+		
+func _spawn_fixed() -> void:
+	var e := fixed_enemy.instantiate()
+	enemies.add_child(e)
+	var s = $EnemySpawn/FixedSpawn
+	e.global_position = s.global_position

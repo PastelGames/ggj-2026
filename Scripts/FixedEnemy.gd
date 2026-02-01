@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 signal killed
 
-@export var max_hp: int = 4
+@export var max_hp: int = 20
 @export var rage_duration : int = 5
 
 var player_location: Vector2 = Vector2.ZERO

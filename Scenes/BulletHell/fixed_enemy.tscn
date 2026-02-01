@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ct4nuoe6tj776"]
+
+[ext_resource type="Script" uid="uid://c2ql5cv8vk834" path="res://Scripts/FixedEnemy.gd" id="1_vdcg1"]
+[ext_resource type="Texture2D" uid="uid://b2t8y7dw7j88u" path="res://duck.png" id="2_vdcg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdcg1"]
+size = Vector2(98, 451)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iifgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vdcg1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tssr"]
+size = Vector2(89, 445)
+
+[node name="FixedEnemy" type="CharacterBody2D" unique_id=1055398034]
+scale = Vector2(1.5, 1.5)
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_vdcg1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108537429]
+position = Vector2(18, -1.5)
+shape = SubResource("RectangleShape2D_vdcg1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1572970015]
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_iifgy")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=942699507]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=264285299]
+position = Vector2(18, 0)
+shape = SubResource("RectangleShape2D_8tssr")
