@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://dqui0qr8ldfg7" path="res://Scripts/script_main_menu.gd" id="1_cdkru"]
 [ext_resource type="PackedScene" uid="uid://dixdnt5jl7dyd" path="res://Scenes/MainMenu/Setting.tscn" id="2_c7oo3"]
 [ext_resource type="Texture2D" uid="uid://d1qhunkcw00lq" path="res://UI elements/Temporary start screen .png" id="2_sg7ab"]
+[ext_resource type="Texture2D" uid="uid://don01j1hw2qhm" path="res://UI elements/start button.png" id="3_kpx3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ua038"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8qovt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vapy7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kpx3y"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=623284664]
 script = ExtResource("1_cdkru")
@@ -23,8 +32,11 @@ offset_left = 750.0
 offset_top = 213.0
 offset_right = 1056.0
 offset_bottom = 290.0
-text = "Play
-"
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ua038")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qovt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vapy7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kpx3y")
+icon = ExtResource("3_kpx3y")
 
 [node name="SettingButton" type="Button" parent="." unique_id=1450288961]
 visible = false
