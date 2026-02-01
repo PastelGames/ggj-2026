@@ -19,22 +19,22 @@ offset_right = 573.0
 offset_bottom = 331.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 0)
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=117851654]
+[node name="Label" type="Label" parent="." unique_id=117851654]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 170.0
-offset_right = 757.0
-offset_bottom = 279.0
+offset_left = 455.0
+offset_top = 229.0
+offset_right = 780.0
+offset_bottom = 338.0
 theme_override_font_sizes/font_size = 79
 text = "Paused"
 
-[node name="Button" type="Button" parent="ColorRect" unique_id=1046417903]
+[node name="Button" type="Button" parent="." unique_id=1046417903]
 layout_mode = 0
-offset_left = 469.0
-offset_top = 409.0
-offset_right = 675.0
-offset_bottom = 484.0
+offset_left = 486.0
+offset_top = 411.0
+offset_right = 692.0
+offset_bottom = 486.0
 text = "Resume
 "
 
-[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

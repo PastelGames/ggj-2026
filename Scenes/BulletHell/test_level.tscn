@@ -22,7 +22,9 @@ position = Vector2(300, 300)
 
 [node name="EnemyContainer" type="Node2D" parent="." unique_id=1672553055]
 
-[node name="PausePanel" parent="." unique_id=362086595 instance=ExtResource("4_t7sc5")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=150383780]
+
+[node name="PausePanel" parent="CanvasLayer" unique_id=362086595 instance=ExtResource("4_t7sc5")]
 process_mode = 2
 visible = false
 offset_left = -1.0
