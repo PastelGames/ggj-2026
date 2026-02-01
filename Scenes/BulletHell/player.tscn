@@ -96,6 +96,7 @@ zoom = Vector2(2, 2)
 
 [node name="FootstepPlayer" type="AudioStreamPlayer2D" parent="." unique_id=638505842]
 stream = SubResource("AudioStreamRandomizer_kw0d8")
+volume_db = 1.0
 
 [node name="GunshotPlayer" type="AudioStreamPlayer2D" parent="." unique_id=568032535]
 stream = SubResource("AudioStreamRandomizer_fwqor")
