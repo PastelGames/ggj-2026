@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://eyo1molfjirr"]
+
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_x85qx"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_nfubw"]
+
+[sub_resource type="Resource" id="Resource_pqlbn"]
+script = ExtResource("1_x85qx")
+text = "I haven't heard of that technology."
+type = 1
+payload = "honest_about_paper"
+
+[sub_resource type="Resource" id="Resource_e7r50"]
+script = ExtResource("1_x85qx")
+text = "Yes, of course. Who hasn't?"
+type = 1
+payload = "fake_knowing_paper"
+
+[resource]
+script = ExtResource("2_nfubw")
+id = "curveball_question"
+dialogue = Array[String](["Since you're interested in the xyz position, I assume you've read the latest research paper on insert-super-obscure-topic-here?
+"])
+responses = Array[ExtResource("1_x85qx")]([SubResource("Resource_pqlbn"), SubResource("Resource_e7r50")])

@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	pass
+	GameManager.start_game()
 
 
 func _on_setting_button_pressed() -> void:

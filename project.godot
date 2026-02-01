@@ -14,6 +14,15 @@ config/name="GGJ 2026"
 run/main_scene="uid://bge0ssf1kk4xt"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+GameManager="*uid://cwh3l4em6s6qb"
+SceneManager="*uid://b3im3usbktjv3"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yaml_dot_gd/plugin.cfg")
+
 [file_customization]
 
 folder_colors={

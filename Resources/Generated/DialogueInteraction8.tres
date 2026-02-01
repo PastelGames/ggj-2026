@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://bmulog1wg2v6f"]
+
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_f7mnh"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_l4kpa"]
+
+[sub_resource type="Resource" id="Resource_f7mnh"]
+script = ExtResource("1_f7mnh")
+text = "Accept your fate."
+payload = "END_4_CORPORATE_PAWN"
+
+[resource]
+script = ExtResource("2_l4kpa")
+id = "accept_salary"
+dialogue = Array[String](["Great! Can you start tomorrow at 8AM, Duck?"])
+responses = Array[ExtResource("1_f7mnh")]([SubResource("Resource_f7mnh")])
