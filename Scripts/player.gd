@@ -11,6 +11,7 @@ signal died
 @export var bullet_speed = 600.0
 @export var max_hp = 10
 
+var in_rage = false
 var hp
 var invuln = false
 var bullet_parent: Node = null
@@ -34,7 +35,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	
+	print(in_rage)
 	# movement input
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -44,20 +45,18 @@ func _physics_process(delta: float) -> void:
 		direction.y += 1
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
-	
-	velocity = (direction.normalized() * speed)
-	
-	# below is acceleration & friction
-	#target_velocity = (direction.normalized() * speed)
-	'''
-	if direction != Vector2.ZERO:
-		velocity.x = move_toward(velocity.x, target_velocity.x, acceleration * delta)
-		velocity.y = move_toward(velocity.y, target_velocity.y, acceleration * delta)
+	if not in_rage:
+		velocity = (direction.normalized() * speed)
 	else:
-		velocity.x = move_toward(velocity.x, 0, friction * delta)
-		velocity.y = move_toward(velocity.y, 0, friction * delta)
-	velocity = velocity.clampf(-speed,speed)
-	'''
+		target_velocity = (direction.normalized() * speed)
+		if direction != Vector2.ZERO:
+			velocity.x = move_toward(velocity.x, target_velocity.x, acceleration * delta)
+			velocity.y = move_toward(velocity.y, target_velocity.y, acceleration * delta)
+		else:
+			velocity.x = move_toward(velocity.x, 0, friction * delta)
+			velocity.y = move_toward(velocity.y, 0, friction * delta)
+		velocity = velocity.clampf(-speed, speed)
+
 	
 	# move and reset direction for next physics tick
 	move_and_slide()
@@ -116,3 +115,9 @@ func apply_buff(input_buff_data : BuffData) -> void:
 	
 	if input_buff_data.BuffName == "resistance":
 		hp = hp + extra_hp * input_buff_data.BuffAmount
+
+func apply_rage(rage_duration : int):
+	in_rage = true
+	if rage_duration > 0:
+		await get_tree().create_timer(rage_duration).timeout
+		in_rage = false
