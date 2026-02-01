@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b6vjlljcng8rw"]
 
 [ext_resource type="Script" uid="uid://br8qoof641rxb" path="res://Scripts/bullet.gd" id="1_sqltv"]
+[ext_resource type="Texture2D" uid="uid://djrx5wj35adpg" path="res://art assets/Enemy bullet .png" id="2_vm320"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4tyxl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ca8xc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ca8xc"]
 
@@ -17,9 +16,9 @@ script = ExtResource("1_sqltv")
 shape = SubResource("CircleShape2D_4tyxl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=899830539]
-position = Vector2(-3.5762787e-07, 0.49999976)
-scale = Vector2(14, 15)
-texture = SubResource("PlaceholderTexture2D_ca8xc")
+position = Vector2(1.4687495, 0.4687496)
+scale = Vector2(0.23071292, 0.23071292)
+texture = ExtResource("2_vm320")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=520519872 groups=["enemy_bullets"]]
 collision_layer = 32
