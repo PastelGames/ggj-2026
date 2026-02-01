@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	MusicManager.set_bgm_and_play("Intro")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	pass
+	GameManager.start_game()
 
 
 func _on_setting_button_pressed() -> void:

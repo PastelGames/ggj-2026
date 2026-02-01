@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dsvc1vxovdco8"]
+
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_jixo6"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_dkjdk"]
+
+[sub_resource type="Resource" id="Resource_jixo6"]
+script = ExtResource("1_jixo6")
+text = "Continue"
+payload = "bullet_hell_2_nomask"
+
+[resource]
+script = ExtResource("2_dkjdk")
+id = "honest_about_paper"
+dialogue = Array[String](["I haven't heard of that technology.", "Oh, well that's fine. It's pretty new. Honestly that was more of a Director-level question.
+"])
+responses = Array[ExtResource("1_jixo6")]([SubResource("Resource_jixo6")])

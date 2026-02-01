@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://c76jua4qfkyfh"]
+
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3ayi8"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_un4x2"]
+
+[sub_resource type="Resource" id="Resource_lpcaj"]
+script = ExtResource("1_3ayi8")
+text = "Correct her. My name is Doug."
+payload = "Bullet Hell"
+
+[sub_resource type="Resource" id="Resource_hjtf7"]
+script = ExtResource("1_3ayi8")
+text = "Let it slide. Go by Duck."
+type = 1
+payload = "accept_duck_name"
+
+[resource]
+script = ExtResource("2_un4x2")
+id = "office_intro"
+dialogue = Array[String](["At the office.", "Why is no one here yet? Wait, did I get the time wrong?", "Hi... apologies for the delay, we've been experiencing a high turnov... ahem, an increased need in personnel, so we've been conducting so many interviews.
+", "No worries, I wasn't waiting for too long.", "You are...t", "I'm Doug. Applying for the Associate position.", "I'm xyz. You're uh... Duck, right? Nice to meet you.", "Doug's a pretty common name... right?", "Duck's a fun name."])
+responses = Array[ExtResource("1_3ayi8")]([SubResource("Resource_lpcaj"), SubResource("Resource_hjtf7")])

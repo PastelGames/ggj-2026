@@ -32,6 +32,8 @@ func _ready() -> void:
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
 	invuln_timer.timeout.connect(_on_invuln_timeout)
 	hitbox.area_entered.connect(_on_hitBox_entered)
+	
+	MusicManager.set_bgm_and_play("Dungeon")
 
 func _physics_process(delta: float) -> void:
 	

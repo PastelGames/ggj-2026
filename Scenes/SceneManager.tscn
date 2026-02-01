@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b3im3usbktjv3"]
+
+[ext_resource type="Script" uid="uid://cbylf4pfv5uy3" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
+[ext_resource type="PackedScene" uid="uid://cx4fsol56pjdq" path="res://Scenes/UI/DialogueScreen.tscn" id="2_7xrkh"]
+[ext_resource type="PackedScene" uid="uid://dxo26f1dgks86" path="res://Scenes/BulletHell/bullet_hell_main.tscn" id="3_83gc0"]
+
+[node name="SceneManager" type="Node" unique_id=1171219416]
+script = ExtResource("1_hjya1")
+scene_dictionary = Dictionary[String, PackedScene]({
+"Bullet Hell": ExtResource("3_83gc0"),
+"Dialogue": ExtResource("2_7xrkh")
+})

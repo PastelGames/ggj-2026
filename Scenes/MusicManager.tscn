@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ws7nn8is1bno"]
+
+[ext_resource type="Script" uid="uid://bi4apagilhfg8" path="res://Scripts/MusicManager.gd" id="1_iysw5"]
+[ext_resource type="AudioStream" uid="uid://cjr8tqo6hmlba" path="res://Imported/Music/Dungeon.wav" id="2_4y3dx"]
+[ext_resource type="AudioStream" uid="uid://d1l0nxlfb31f0" path="res://Imported/Music/Intro.mp3" id="2_6b4sy"]
+
+[node name="MusicManager" type="Node" unique_id=150442177]
+script = ExtResource("1_iysw5")
+track_dictionary = Dictionary[String, AudioStream]({
+"Dungeon": ExtResource("2_4y3dx"),
+"Intro": ExtResource("2_6b4sy")
+})
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1062827009]
