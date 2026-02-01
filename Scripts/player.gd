@@ -10,8 +10,8 @@ signal died
 @export var strength = 1
 @export var bullet_speed = 800.0
 @export var max_hp = 10
-@export var acceleration = 1000
-@export var friction = 1000
+@export var acceleration = 600
+@export var friction = 600
 
 var in_rage = false
 var hp
@@ -137,6 +137,8 @@ func apply_buff(input_buff_data : BuffData) -> void:
 
 func apply_rage(rage_duration : int):
 	in_rage = true
+	speed += 200.0
 	if rage_duration > 0:
 		await get_tree().create_timer(rage_duration).timeout
 		in_rage = false
+		speed -= 200.0
