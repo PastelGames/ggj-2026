@@ -22,6 +22,7 @@ position = Vector2(575, 324)
 texture = ExtResource("2_sg7ab")
 
 [node name="ExitButton" type="Button" parent="." unique_id=166403615]
+visible = false
 offset_left = 750.0
 offset_top = 430.0
 offset_right = 1056.0
@@ -30,9 +31,9 @@ text = "Exit"
 
 [node name="PlayButton" type="Button" parent="." unique_id=1161363074]
 offset_left = 756.0
-offset_top = 324.0
+offset_top = 382.0
 offset_right = 1062.0
-offset_bottom = 401.0
+offset_bottom = 459.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ua038")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8qovt")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_vapy7")
@@ -52,7 +53,7 @@ text = "Setting
 visible = false
 
 [node name="MainTitle" type="Sprite2D" parent="." unique_id=292128546]
-position = Vector2(574, 385)
+position = Vector2(576, 458)
 texture = ExtResource("6_8qovt")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
