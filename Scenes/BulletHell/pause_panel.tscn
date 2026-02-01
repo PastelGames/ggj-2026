@@ -1,6 +1,15 @@
-[gd_scene format=3 uid="uid://bfyoan7thjbs8"]
+[gd_scene format=3 uid="uid://ryvfswj7d705"]
 
-[ext_resource type="Script" uid="uid://r3pwbr75h28y" path="res://Scripts/script_pause_menu.gd" id="1_ipfgy"]
+[ext_resource type="Script" path="res://Scripts/script_pause_menu.gd" id="1_ipfgy"]
+[ext_resource type="Texture2D" uid="uid://ddgu631cupbwk" path="res://UI elements/menu screen.jpg" id="2_eusib"]
+[ext_resource type="Texture2D" uid="uid://chdlwkrv1fah5" path="res://UI elements/PAUSED.png" id="2_wdfil"]
+[ext_resource type="Texture2D" uid="uid://csdckcqdbv1fo" path="res://UI elements/resunme.png" id="4_mu7h3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_eusib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mu7h3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imvsw"]
 
 [node name="PausePanel" type="Control" unique_id=362086595]
 layout_mode = 3
@@ -19,22 +28,28 @@ offset_right = 573.0
 offset_bottom = 331.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 0)
 
-[node name="Label" type="Label" parent="." unique_id=117851654]
-layout_mode = 0
-offset_left = 455.0
-offset_top = 229.0
-offset_right = 780.0
-offset_bottom = 338.0
-theme_override_font_sizes/font_size = 79
-text = "Paused"
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1542528680]
+texture = SubResource("CanvasTexture_eusib")
+polygon = PackedVector2Array(-38, -27, 1172, -36, 1198, 729, -5, 703)
 
-[node name="Button" type="Button" parent="." unique_id=1046417903]
-layout_mode = 0
-offset_left = 486.0
-offset_top = 411.0
-offset_right = 692.0
-offset_bottom = 486.0
-text = "Resume
-"
+[node name="MenuScreen" type="Sprite2D" parent="." unique_id=1794537982]
+position = Vector2(567, 321)
+scale = Vector2(0.6673387, 0.6673387)
+texture = ExtResource("2_eusib")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="PausedText" type="Sprite2D" parent="." unique_id=655449521]
+position = Vector2(565, 141)
+texture = ExtResource("2_wdfil")
+
+[node name="Resume button" type="Button" parent="." unique_id=1046417903]
+layout_mode = 0
+offset_left = 335.0
+offset_top = 210.0
+offset_right = 790.0
+offset_bottom = 374.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mu7h3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_imvsw")
+icon = ExtResource("4_mu7h3")
+expand_icon = true
+
+[connection signal="pressed" from="Resume button" to="." method="_on_button_pressed"]

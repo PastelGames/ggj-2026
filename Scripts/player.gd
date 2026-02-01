@@ -2,14 +2,16 @@ extends CharacterBody2D
 
 signal died
 
-@export var friction = 1000.0
-@export var acceleration = 1000.0
+#@export var friction = 1000.0
+#@export var acceleration = 1000.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
-@export var shot_cd = 0.10
+@export var shot_cd = 0.40
 @export var strength = 1
-@export var bullet_speed = 600.0
+@export var bullet_speed = 800.0
 @export var max_hp = 10
+@export var acceleration = 600
+@export var friction = 600
 
 var in_rage = false
 var hp
@@ -20,24 +22,27 @@ var bullet_parent: Node = null
 @onready var shoot_timer: Timer = $ShotTimer
 @onready var invuln_timer: Timer = $InvulnTimer
 @onready var shot_origin: Marker2D = $ShootPositionMarker
+@onready var footstep_player: AudioStreamPlayer2D = $FootstepPlayer
+@onready var gunshot_player: AudioStreamPlayer2D = $GunshotPlayer
 
 var direction = Vector2.ZERO
 var target_velocity = Vector2.ZERO
 var shot_direction = Vector2.ZERO
+var _footsteps: Array[AudioStream] = []
+var _gunshots: Array[AudioStream] = []
+var _step_timer: float = 0.0
 
 func _ready() -> void:
-
+	randomize()
 	hp = max_hp
 	shoot_timer.wait_time = shot_cd
 	shoot_timer.timeout.connect(_on_shoot_timer_timeout)
 	invuln_timer.timeout.connect(_on_invuln_timeout)
 	hitbox.area_entered.connect(_on_hitBox_entered)
-	
 	MusicManager.set_bgm_and_play("Dungeon")
 
 func _physics_process(delta: float) -> void:
 	
-	print(in_rage)
 	# movement input
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -59,11 +64,20 @@ func _physics_process(delta: float) -> void:
 			velocity.y = move_toward(velocity.y, 0, friction * delta)
 		velocity = velocity.clampf(-speed, speed)
 
+	var spd := velocity.length()
+
+	if spd < 30.0:
+		_step_timer = 0.0
 	
+	_step_timer -= delta
+	if _step_timer <= 0.0:
+		footstep_player.play()
+		_step_timer = 0.25
 	# move and reset direction for next physics tick
 	move_and_slide()
 	look_at(get_global_mouse_position())
 	direction = Vector2.ZERO
+
 
 func _on_shoot_timer_timeout() -> void:
 	if not Input.is_action_pressed("shoot"):
@@ -77,6 +91,7 @@ func _on_shoot_timer_timeout() -> void:
 	b.direction = Vector2.from_angle(rotation).normalized()
 	b.damage = strength
 	b.speed = bullet_speed
+	gunshot_player.play()
 	
 func _on_hitBox_entered(area : Area2D) -> void:
 	if invuln:
@@ -98,11 +113,13 @@ func _die() -> void:
 func _on_invuln_timeout() -> void:
 	invuln = false
 	
+
 func apply_buff(input_buff_data : BuffData) -> void:
 	var extra_speed = 100
 	var extra_strength = 1
 	var extra_hp = 1
-	
+	if not input_buff_data:
+		return
 	if input_buff_data.BuffName == "speed":
 		speed = speed + extra_speed * input_buff_data.BuffAmount
 		if input_buff_data.BuffDuration > 0:
@@ -120,6 +137,8 @@ func apply_buff(input_buff_data : BuffData) -> void:
 
 func apply_rage(rage_duration : int):
 	in_rage = true
+	speed += 200.0
 	if rage_duration > 0:
 		await get_tree().create_timer(rage_duration).timeout
 		in_rage = false
+		speed -= 200.0

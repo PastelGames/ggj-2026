@@ -1,14 +1,14 @@
-[gd_scene format=4 uid="uid://bcbx85drsj7vv"]
+[gd_scene format=4 uid="uid://d4aubggv8f273"]
 
-[ext_resource type="Script" path="res://Scripts/level01.gd" id="1_ns8yt"]
+[ext_resource type="Script" uid="uid://dimk3acq356qu" path="res://Scripts/level01.gd" id="1_ns8yt"]
 [ext_resource type="PackedScene" uid="uid://c1031ps30bjdd" path="res://Scenes/BulletHell/player.tscn" id="2_mm1wh"]
 [ext_resource type="PackedScene" uid="uid://f3boarrjcb5t" path="res://Scenes/BulletHell/enemy.tscn" id="3_svqvh"]
-[ext_resource type="PackedScene" path="res://Scenes/BulletHell/fixed_enemy.tscn" id="4_mm1wh"]
-[ext_resource type="Texture2D" path="res://Huge tile 150x150.png" id="4_v5og7"]
-[ext_resource type="Texture2D" path="res://art assets/floor tiles/floors 1-4.png" id="5_v5og7"]
-[ext_resource type="Texture2D" path="res://walls tiles.png" id="5_vkmdn"]
-[ext_resource type="PackedScene" uid="uid://bfyoan7thjbs8" path="res://Scenes/BulletHell/pause_panel.tscn" id="6_rdg30"]
-[ext_resource type="Texture2D" path="res://walls/walls 1-4.png" id="11_tld68"]
+[ext_resource type="PackedScene" uid="uid://ct4nuoe6tj776" path="res://Scenes/BulletHell/fixed_enemy.tscn" id="4_mm1wh"]
+[ext_resource type="Texture2D" uid="uid://50uvphenisp1" path="res://Huge tile 150x150.png" id="4_v5og7"]
+[ext_resource type="Texture2D" uid="uid://cbyscboopfby6" path="res://art assets/floor tiles/floors 1-4.png" id="5_v5og7"]
+[ext_resource type="Texture2D" uid="uid://bvwl4etcsb0e1" path="res://walls tiles.png" id="5_vkmdn"]
+[ext_resource type="PackedScene" path="res://Scenes/BulletHell/pause_panel.tscn" id="6_rdg30"]
+[ext_resource type="Texture2D" uid="uid://chruym6sj8q0v" path="res://walls/walls 1-4.png" id="11_tld68"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkmdn"]
 texture = ExtResource("5_v5og7")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://l7pm3qje443d"
+path="res://.godot/imported/FT_21.mp3-363f55668d3a84eeb076790ada4ac594.mp3str"
+
+[deps]
+
+source_file="res://art assets/footstepssfx/FT_21.mp3"
+dest_files=["res://.godot/imported/FT_21.mp3-363f55668d3a84eeb076790ada4ac594.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

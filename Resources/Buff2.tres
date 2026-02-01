@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://ho7q0c14pm61"]
+
+[ext_resource type="Script" path="res://BuffData.gd" id="1_5v577"]
+
+[resource]
+script = ExtResource("1_5v577")
+BuffName = "strength"
+BuffDuration = -1.0
+BuffAmount = 1
