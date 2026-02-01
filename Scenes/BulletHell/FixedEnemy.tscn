@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ct4nuoe6tj776"]
+
+[ext_resource type="Script" uid="uid://c2ql5cv8vk834" path="res://Scripts/FixedEnemy.gd" id="1_fr488"]
+[ext_resource type="Texture2D" uid="uid://c3hdij52qhkvs" path="res://enemy_1.PNG" id="2_img7i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
+radius = 37.93
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iifgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_img7i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
+radius = 37.93
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1055398034]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_fr488")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108537429]
+shape = SubResource("CircleShape2D_qi2p4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1572970015]
+position = Vector2(4.000004, 5.000002)
+scale = Vector2(0.06866554, 0.06866554)
+sprite_frames = SubResource("SpriteFrames_iifgy")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=942699507]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=264285299]
+shape = SubResource("CircleShape2D_4gyqm")
