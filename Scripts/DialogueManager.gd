@@ -41,7 +41,7 @@ func _advance_dialogue_interaction():
 
 func begin_dialogue_interaction():
 	_current_dialogue_index = 0
-	display_dialogue(dialogue_interaction_data.dialogue[_current_dialogue_index])
+	display_dialogue(_dialogue_interaction_data.dialogue[_current_dialogue_index])
 	transition_to_state("DialogueState")
 
 
@@ -65,17 +65,17 @@ func show_response_panel():
 
 
 func populate_response_buttons_with_data():
-	left_option_button.text = dialogue_interaction_data.responses[0].response_text
-	right_option_button.text = dialogue_interaction_data.responses[1].response_text
+	left_option_button.text = dialogue_interaction_data.responses[0].text
+	right_option_button.text = dialogue_interaction_data.responses[1].text
 
 
 func handle_response(response: ResponseData):
 	match response.type:
 		ResponseData.ResponseType.CHANGE_SCENE:
-			get_tree().change_scene_to_packed(response.payload)
+			SceneManager.load_scene(response.payload)
 			
 		ResponseData.ResponseType.NEW_DIALOGUE:
-			dialogue_interaction_data = response.payload
+			dialogue_interaction_data = GameManager.interaction_dictionary[response.payload]
 
 
 func on_left_option_selected():

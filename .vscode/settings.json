@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://www.schemastore.org/yamllint.json": "file:///Users/eltucker/Documents/01_Projects/GlobalGameJame2026/story.yml"
+    }
+}

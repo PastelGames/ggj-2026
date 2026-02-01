@@ -13,10 +13,21 @@ config_version=5
 config/name="GGJ 2026"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+GameManager="*uid://cwh3l4em6s6qb"
+SceneManager="*uid://b3im3usbktjv3"
+MusicManager="*uid://ws7nn8is1bno"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yaml_dot_gd/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
 "res://Imported/": "pink",
+"res://Resources/": "green",
 "res://Scenes/": "yellow",
 "res://Scripts/": "orange"
 }

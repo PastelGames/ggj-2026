@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://62bnv7gb8i7r"]
+
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3rqyq"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_8wpqx"]
+
+[sub_resource type="Resource" id="Resource_3rqyq"]
+script = ExtResource("1_3rqyq")
+text = "Continue interview"
+payload = "bullet_hell_1_nomask"
+
+[resource]
+script = ExtResource("2_8wpqx")
+id = "correct_name"
+dialogue = Array[String](["Oh, my name is actually pronounced Doug. As in Douglas. Like, I \"dug\" myself into a hole.
+"])
+responses = Array[ExtResource("1_3rqyq")]([SubResource("Resource_3rqyq")])
