@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://f3boarrjcb5t"]
 
 [ext_resource type="Script" uid="uid://b2et35x3kpp3y" path="res://Scripts/enemy.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://c3hdij52qhkvs" path="res://enemy_1.PNG" id="2_t5gw4"]
+[ext_resource type="Texture2D" uid="uid://c3hdij52qhkvs" path="res://art assets/enemy_1.PNG" id="2_t5gw4"]
 [ext_resource type="Script" uid="uid://c8c6suy36845a" path="res://Scripts/shooter.gd" id="3_qi2p4"]
 [ext_resource type="PackedScene" uid="uid://b6vjlljcng8rw" path="res://Scenes/BulletHell/bullet_enemy.tscn" id="4_iifgy"]
 

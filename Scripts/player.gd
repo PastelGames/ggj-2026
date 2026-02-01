@@ -37,7 +37,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	print(in_rage)
 	# movement input
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1

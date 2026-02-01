@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2t8y7dw7j88u"
-path="res://.godot/imported/duck.png-b41cfd9d5b46cdf9331a4d2a71452a35.ctex"
+uid="uid://3xoxi1d3g6ff"
+path="res://.godot/imported/Bullet .png-e51a26bee563efb8fbf3b709003d532e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://duck.png"
-dest_files=["res://.godot/imported/duck.png-b41cfd9d5b46cdf9331a4d2a71452a35.ctex"]
+source_file="res://art assets/Bullet .png"
+dest_files=["res://.godot/imported/Bullet .png-e51a26bee563efb8fbf3b709003d532e.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ct4nuoe6tj776"]
 
 [ext_resource type="Script" uid="uid://c2ql5cv8vk834" path="res://Scripts/FixedEnemy.gd" id="1_vdcg1"]
-[ext_resource type="Texture2D" uid="uid://b2t8y7dw7j88u" path="res://duck.png" id="2_vdcg1"]
+[ext_resource type="Texture2D" uid="uid://b2t8y7dw7j88u" path="res://art assets/duck.png" id="2_vdcg1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdcg1"]
 size = Vector2(98, 451)

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://kg15eommmj01" path="res://Scripts/player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://bqm1spqlwuemo" path="res://Scenes/BulletHell/bullet_player.tscn" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://cgchlgu0ywrea" path="res://player.PNG" id="3_r7osi"]
-[ext_resource type="Texture2D" uid="uid://ft82m62a03ve" path="res://Gun.png" id="4_vcbxa"]
+[ext_resource type="Texture2D" uid="uid://cgchlgu0ywrea" path="res://art assets/player.PNG" id="3_r7osi"]
+[ext_resource type="Texture2D" uid="uid://ft82m62a03ve" path="res://art assets/Gun.png" id="4_vcbxa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 24.0
