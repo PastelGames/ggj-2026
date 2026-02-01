@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3y7kt4epecct"
+path="res://.godot/imported/fire_1.mp3-866bf8a9822ae4d77ac6197a3c334efe.mp3str"
+
+[deps]
+
+source_file="res://art assets/gunsfx/fire_1.mp3"
+dest_files=["res://.godot/imported/fire_1.mp3-866bf8a9822ae4d77ac6197a3c334efe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -28,7 +28,7 @@ func _initialize(buffs: BuffData) -> void:
 	
 func _ready() -> void:
 	# For testing
-	#_initialize(null)
+	_initialize(null)
 	end.area_entered.connect(_on_end_entered)
 	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
 	$EnemySpawnTimer.start(2)
