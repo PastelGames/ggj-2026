@@ -4,6 +4,7 @@ extends Node
 @export var bullet_container_path: NodePath
 @export var bullet_speed: float = 220.0
 @export var fire_interval: float = 0.8
+@export var bullet_damage = 1
 
 var direction: Vector2 = Vector2.ZERO
 var _timer: Timer
@@ -33,3 +34,5 @@ func _fire_one() -> void:
 	b.global_position = origin
 	b.speed = bullet_speed
 	b.direction = direction
+	b.damage = bullet_damage
+
