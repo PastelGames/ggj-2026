@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="GGJ 2026"
-run/main_scene="uid://bge0ssf1kk4xt"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [file_customization]
@@ -26,6 +25,7 @@ folder_colors={
 
 enemy_bullets=""
 player_bullets=""
+level_manager=""
 
 [input]
 

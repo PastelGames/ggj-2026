@@ -6,6 +6,9 @@ extends Node2D
 var bullet_parent: Node = null
 var player_location: Vector2 = Vector2.ZERO
 var player: Node = null
+
+@onready var spawns: Array[Node] = [$EnemySpawn/Spawn1, $EnemySpawn/Spawn2,
+	$EnemySpawn/Spawn3, $EnemySpawn/Spawn4, $EnemySpawn/Spawn5]	
 @onready var player_spawn: Marker2D = $PlayerSpawn
 @onready var enemy_spawn: Marker2D = $EnemySpawn
 @onready var bullets_player: Node2D = $BulletContainer_Player
@@ -17,7 +20,10 @@ func _physics_process(delta: float) -> void:
 
 func _ready() -> void:
 	_spawn_player()
-	_spawn_enemy()
+	$EnemySpawnTimer.timeout.connect(_spawn_enemy)
+	$EnemySpawnTimer.start()
+	$DifficultyTimer.timeout.connect(_difficulty_increase)
+	$DifficultyTimer.start()
 
 func _spawn_player() -> void:
 	var p := player_scene.instantiate()
@@ -30,7 +36,9 @@ func _spawn_player() -> void:
 func _spawn_enemy() -> void:
 	var e := enemy_scene.instantiate()
 	enemies.add_child(e)
-	e.global_position = enemy_spawn.global_position
+	var spawn_number = randi_range(0,4)
+	var s = spawns.get(spawn_number)
+	e.global_position = s.global_position
 	
 	var shooter := e.get_node_or_null("Shooter")
 	if shooter:
@@ -45,4 +53,6 @@ func _process(delta: float) -> void:
 		get_tree().paused = true
 		get_node("CanvasLayer/PausePanel").show()
 		
-		
+func _difficulty_increase() -> void:
+	if ($EnemySpawnTimer.wait_time > 1.0):
+		$EnemySpawnTimer.wait_time -= 0.5
