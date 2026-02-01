@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://53g5p5aaml7r"]
+
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_w28fw"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_tdng0"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_m1b7j"]
+
+[sub_resource type="Resource" id="Resource_d1b2m"]
+script = ExtResource("1_w28fw")
+speaker = "Doug"
+text = "And quite frankly, I find this insulting."
+
+[sub_resource type="Resource" id="Resource_iy7xg"]
+script = ExtResource("1_w28fw")
+speaker = "Interviewer"
+text = "...Insulting?"
+
+[sub_resource type="Resource" id="Resource_dmquw"]
+script = ExtResource("1_w28fw")
+speaker = "Doug"
+text = "You can't get my name right, you scout for skills that goes well beyond the job description, and you pay a dollar an hour?"
+
+[sub_resource type="Resource" id="Resource_sqx2a"]
+script = ExtResource("1_w28fw")
+speaker = "Doug"
+text = "You guys must be violating *some* law. How is this company still running?"
+
+[sub_resource type="Resource" id="Resource_bnkdm"]
+script = ExtResource("1_w28fw")
+speaker = "Narration"
+text = "With that, you stand up from the ugly office chair they offered you."
+
+[sub_resource type="Resource" id="Resource_4suo3"]
+script = ExtResource("1_w28fw")
+speaker = "Doug"
+text = "You're welcome for my time, and good luck with your search."
+
+[sub_resource type="Resource" id="Resource_fv0wv"]
+script = ExtResource("1_w28fw")
+speaker = "Doug"
+text = "(Mic drop...!)"
+
+[sub_resource type="Resource" id="Resource_v24op"]
+script = ExtResource("1_w28fw")
+speaker = "Narration"
+text = "You walk out of the office room, without a job, without a pay."
+
+[sub_resource type="Resource" id="Resource_c44x8"]
+script = ExtResource("1_w28fw")
+speaker = "Narration"
+text = "But as the elevator doors close on the 13th floor, you feel a rare, genuine spark of pride."
+
+[sub_resource type="Resource" id="Resource_5qq4m"]
+script = ExtResource("1_w28fw")
+speaker = "Narration"
+text = "You may have gone horribly off-script, but you just gave the best performance in your life."
+
+[resource]
+script = ExtResource("3_m1b7j")
+id = "end_1_dignity_intact"
+dialogue = Array[ExtResource("1_w28fw")]([SubResource("Resource_d1b2m"), SubResource("Resource_iy7xg"), SubResource("Resource_dmquw"), SubResource("Resource_sqx2a"), SubResource("Resource_bnkdm"), SubResource("Resource_4suo3"), SubResource("Resource_fv0wv"), SubResource("Resource_v24op"), SubResource("Resource_c44x8"), SubResource("Resource_5qq4m")])

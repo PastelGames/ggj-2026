@@ -1,5 +1,4 @@
 interactions:
-
   - interaction_id: intro_scene
 
     dialogue:
@@ -7,8 +6,7 @@ interactions:
         text: 10:34 AM, Monday.
       
       - speaker: Narration
-        text: After a hundred of resumes sent into the void, dozens of automated rejection letters,
-        and more-than-enough ghostings by recruiters, you're finally here in the corner of an empty bathroom on the 13th floor of RTN Management, awaiting the final round interview.
+        text: After a hundred of resumes sent into the void, dozens of automated rejection letters, and more-than-enough ghostings by recruiters, you're finally here in the corner of an empty bathroom on the 13th floor of RTN Management, awaiting the final round interview.
 
       - speaker: Narration
         text: The fluorescent lights hum with a clinical brightness, a little *too* bright to be comfortable.
@@ -77,8 +75,7 @@ interactions:
         text: ...
 
       - speaker: Doug
-        text: (...Duck?)
-        (I said Doug, right? Is my enunciation that bad? Or maybe she misspoke.)
+        text: (...Duck?) (I said Doug, right? Is my enunciation that bad? Or maybe she misspoke.)
 
       - speaker: Interviewer
         text: Duck's a fun name.
@@ -111,8 +108,7 @@ interactions:
         text: Duck? Is everything alright?
       
       - speaker: Doug
-        text: My name is actually pronounced Doug. As in, "I 'dug' myself in a hole."
-        Or as in Douglas.
+        text: My name is actually pronounced Doug. As in, "I 'dug' myself in a hole." Or as in Douglas.
       
       - speaker: Interviewer
         text: Oh my apologies! It's definitely not because I didn't read your resume beforehand, haha.
@@ -121,8 +117,7 @@ interactions:
         text: ...
 
       - speaker: Interviewer
-        text: That was a joke. I've just been overworked and deathly busy conducting so many interviews.
-        I just got confused who I'm interviewing.
+        text: That was a joke. I've just been overworked and deathly busy conducting so many interviews. I just got confused who I'm interviewing.
 
       - speaker: Interviewer
         text: Anyway, shall we continue?
@@ -143,8 +138,7 @@ interactions:
         text: Duck? Is everything alright?
       
       - speaker: Doug
-        text: Yeah, everything's alright!
-        Yes, my name *is* Duck. Fun, right? Quack quack. Haha. Nice to meet you too.
+        text: Yeah, everything's alright! Yes, my name *is* Duck. Fun, right? Quack quack. Haha. Nice to meet you too.
       
       - speaker: Interviewer
         text: Haha.

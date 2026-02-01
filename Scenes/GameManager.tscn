@@ -1,19 +1,24 @@
 [gd_scene format=3 uid="uid://bad55gk5fdbxq"]
 
 [ext_resource type="Script" uid="uid://bmiyegvm2tav1" path="res://Scripts/GameManager.gd" id="1_2wx25"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_73o00"]
-[ext_resource type="Resource" uid="uid://dw3ejbryyps6w" path="res://Resources/Generated/DialogueInteraction0.tres" id="3_tf73o"]
-[ext_resource type="Resource" uid="uid://ccpwp8h7u8yqi" path="res://Resources/Generated/DialogueInteraction1.tres" id="4_73o00"]
-[ext_resource type="Resource" uid="uid://b45hho7u334x7" path="res://Resources/Generated/DialogueInteraction2.tres" id="5_tf73o"]
-[ext_resource type="Resource" uid="uid://p7svmhqaxkhy" path="res://Resources/Generated/DialogueInteraction3.tres" id="6_5p8nv"]
-[ext_resource type="Resource" uid="uid://bwddksv2f7mp2" path="res://Resources/Generated/DialogueInteraction4.tres" id="7_kw7i1"]
-[ext_resource type="Resource" uid="uid://cqljkak7d2ku3" path="res://Resources/Generated/DialogueInteraction5.tres" id="8_stkq7"]
-[ext_resource type="Resource" uid="uid://c2xs5n8pgkk2o" path="res://Resources/Generated/DialogueInteraction6.tres" id="9_kvdjo"]
-[ext_resource type="Resource" uid="uid://cmh5qnr14mox4" path="res://Resources/Generated/DialogueInteraction7.tres" id="10_rvede"]
-[ext_resource type="Resource" uid="uid://bst0pwm7f7qxf" path="res://Resources/Generated/DialogueInteraction8.tres" id="11_yfpbv"]
-[ext_resource type="Resource" uid="uid://d2nu4ib8uj7lh" path="res://Resources/Generated/DialogueInteraction9.tres" id="12_65px1"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_kvdjo"]
+[ext_resource type="Resource" uid="uid://3jaf4rt0q5o3" path="res://Resources/Generated/DialogueInteraction0.tres" id="3_rvede"]
+[ext_resource type="Resource" uid="uid://cgki7dhf1eqs3" path="res://Resources/Generated/DialogueInteraction1.tres" id="4_yfpbv"]
+[ext_resource type="Resource" uid="uid://kck8iligasur" path="res://Resources/Generated/DialogueInteraction2.tres" id="5_65px1"]
+[ext_resource type="Resource" uid="uid://djmjb8s07pi4v" path="res://Resources/Generated/DialogueInteraction3.tres" id="6_376fu"]
+[ext_resource type="Resource" uid="uid://dnqdjxflsfdoh" path="res://Resources/Generated/DialogueInteraction4.tres" id="7_ikowh"]
+[ext_resource type="Resource" uid="uid://cgiswrlu3s2wl" path="res://Resources/Generated/DialogueInteraction5.tres" id="8_ts0ry"]
+[ext_resource type="Resource" uid="uid://dr0qveypoljqw" path="res://Resources/Generated/DialogueInteraction6.tres" id="9_1nj4m"]
+[ext_resource type="Resource" uid="uid://dk52qytouyobi" path="res://Resources/Generated/DialogueInteraction7.tres" id="10_7gkxs"]
+[ext_resource type="Resource" uid="uid://kdrhlhntxsys" path="res://Resources/Generated/DialogueInteraction8.tres" id="11_e8qpc"]
+[ext_resource type="Resource" uid="uid://yg5bjsskrebs" path="res://Resources/Generated/DialogueInteraction9.tres" id="12_ghwql"]
+[ext_resource type="Resource" uid="uid://53g5p5aaml7r" path="res://Resources/Generated/DialogueInteraction10.tres" id="13_sfgxh"]
+[ext_resource type="Resource" uid="uid://ccuymjsg7k30s" path="res://Resources/Generated/DialogueInteraction11.tres" id="14_gtarr"]
+[ext_resource type="Resource" uid="uid://d5dj2r3ehx37" path="res://Resources/Generated/DialogueInteraction12.tres" id="15_7iggp"]
+[ext_resource type="Resource" uid="uid://dihmpag8w5rxu" path="res://Resources/Generated/DialogueInteraction13.tres" id="16_irtp8"]
+[ext_resource type="Resource" uid="uid://bh05gvf4thy8w" path="res://Resources/Generated/DialogueInteraction14.tres" id="17_34bxj"]
 
 [node name="GameManager" type="Node" unique_id=280040094]
 script = ExtResource("1_2wx25")
-dialogue_interactions = Array[ExtResource("2_73o00")]([ExtResource("3_tf73o"), ExtResource("4_73o00"), ExtResource("5_tf73o"), ExtResource("6_5p8nv"), ExtResource("7_kw7i1"), ExtResource("8_stkq7"), ExtResource("9_kvdjo"), ExtResource("10_rvede"), ExtResource("11_yfpbv"), ExtResource("12_65px1")])
-starting_dialogue_interaction = ExtResource("3_tf73o")
+dialogue_interactions = Array[ExtResource("2_kvdjo")]([ExtResource("3_rvede"), ExtResource("4_yfpbv"), ExtResource("5_65px1"), ExtResource("6_376fu"), ExtResource("7_ikowh"), ExtResource("8_ts0ry"), ExtResource("9_1nj4m"), ExtResource("10_7gkxs"), ExtResource("11_e8qpc"), ExtResource("12_ghwql"), ExtResource("13_sfgxh"), ExtResource("14_gtarr"), ExtResource("15_7iggp"), ExtResource("16_irtp8"), ExtResource("17_34bxj")])
+starting_dialogue_interaction = ExtResource("3_rvede")

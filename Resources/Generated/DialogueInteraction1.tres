@@ -1,22 +1,43 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://ccpwp8h7u8yqi"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://cgki7dhf1eqs3"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3rqyq"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_8wpqx"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_8wpqx"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_l5u7s"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_4ydrr"]
 
-[sub_resource type="Resource" id="Resource_3rqyq"]
-script = ExtResource("1_3rqyq")
+[sub_resource type="Resource" id="Resource_nyrba"]
+script = ExtResource("1_8wpqx")
+speaker = "Doug"
+text = "Okay, deep breathes. All you have to do is speak clearly, maintain eye contact, and smile!"
+
+[sub_resource type="Resource" id="Resource_xa5ny"]
+script = ExtResource("1_8wpqx")
+speaker = "Doug"
+text = "It's no different than reading a script. And just a tiny bit of improv."
+
+[sub_resource type="Resource" id="Resource_pgjx4"]
+script = ExtResource("1_8wpqx")
+speaker = "Doug"
+text = "Don't think about paying rent, and definitely don't think about eviction."
+
+[sub_resource type="Resource" id="Resource_oh24y"]
+script = ExtResource("1_8wpqx")
+speaker = "Doug"
+text = "You've got this, Doug. I've got this."
+
+[sub_resource type="Resource" id="Resource_yv2q3"]
+script = ExtResource("2_l5u7s")
 text = "I'm ready."
 type = 1
 payload = "mispronounced_name"
 
-[sub_resource type="Resource" id="Resource_8wpqx"]
-script = ExtResource("1_3rqyq")
+[sub_resource type="Resource" id="Resource_iliih"]
+script = ExtResource("2_l5u7s")
 text = "I'm ready! (Smile one last time.)"
 type = 1
 payload = "mispronounced_name"
 
 [resource]
-script = ExtResource("2_8wpqx")
+script = ExtResource("3_4ydrr")
 id = "intro_scene_continued"
-dialogue = Array[String](["Okay, deep breathes. All you have to do is speak clearly, maintain eye contact, and smile!", "It's no different than reading a script. And just a tiny bit of improv.", "Don't think about paying rent, and definitely don't think about eviction.", "You've got this, Doug. I've got this."])
-responses = Array[ExtResource("1_3rqyq")]([SubResource("Resource_3rqyq"), SubResource("Resource_8wpqx")])
+dialogue = Array[ExtResource("1_8wpqx")]([SubResource("Resource_nyrba"), SubResource("Resource_xa5ny"), SubResource("Resource_pgjx4"), SubResource("Resource_oh24y")])
+responses = Array[ExtResource("2_l5u7s")]([SubResource("Resource_yv2q3"), SubResource("Resource_iliih")])

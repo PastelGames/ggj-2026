@@ -16,3 +16,4 @@ func start_game():
 	get_tree().change_scene_to_packed(dialogue_scene)
 	await get_tree().scene_changed
 	get_tree().current_scene.dialogue_interaction_data = starting_dialogue_interaction
+	print(starting_dialogue_interaction.dialogue.size())

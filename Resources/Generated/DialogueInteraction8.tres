@@ -1,20 +1,111 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://bst0pwm7f7qxf"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://kdrhlhntxsys"]
 
-[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_f7mnh"]
-[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_l4kpa"]
+[ext_resource type="Script" uid="uid://2fvkkwur7c2p" path="res://Scripts/Resources/DialogueEntry.gd" id="1_l4kpa"]
+[ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="2_rihrq"]
+[ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="3_hhdd2"]
 
-[sub_resource type="Resource" id="Resource_f7mnh"]
-script = ExtResource("1_f7mnh")
+[sub_resource type="Resource" id="Resource_bsyuw"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "Okay now for the *good* part... Let's discuss salaries and benefits!"
+
+[sub_resource type="Resource" id="Resource_27xyo"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "If we decide to go forward with you, we'd like to offer 100 as a starting salary."
+
+[sub_resource type="Resource" id="Resource_vy51d"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "Wow, a 100K salary?"
+
+[sub_resource type="Resource" id="Resource_5n80c"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "Haha!"
+
+[sub_resource type="Resource" id="Resource_1s6y8"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_cbdlq"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "..."
+
+[sub_resource type="Resource" id="Resource_2jxrr"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "No, we meant 100 cents hourly."
+
+[sub_resource type="Resource" id="Resource_g4gik"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(100 cents...hourly? That's got to be a joke!)"
+
+[sub_resource type="Resource" id="Resource_2a27j"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "..Haha, that's a good one!"
+
+[sub_resource type="Resource" id="Resource_fefvt"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "Indeed, a great offer. Here at RTN, we pride ourselves on our generosity."
+
+[sub_resource type="Resource" id="Resource_w7fyj"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(...Oh god, she means it.)"
+
+[sub_resource type="Resource" id="Resource_sjyfp"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(100 cents hourly... That's $8 a day if I don't eat lunch... $40 a week...)"
+
+[sub_resource type="Resource" id="Resource_pcykc"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(I can't even buy a week's worth of groceries from Trader Woe's, much less pay my rent!)"
+
+[sub_resource type="Resource" id="Resource_rqrec"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(What if I negotiate and ask for minimum wage? Would I jeapordize my chances of getting this job?)"
+
+[sub_resource type="Resource" id="Resource_xa2mg"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(Will I stay unemployed for life?)"
+
+[sub_resource type="Resource" id="Resource_mgg3r"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(Ugh, maybe $8 a day is better than earning nothing at all.)"
+
+[sub_resource type="Resource" id="Resource_q8xai"]
+script = ExtResource("1_l4kpa")
+speaker = "Doug"
+text = "(After all, they say you get paid with experience when you're young... right? Right!?)"
+
+[sub_resource type="Resource" id="Resource_1d4ec"]
+script = ExtResource("1_l4kpa")
+speaker = "Interviewer"
+text = "Ahem. So, does our offer sound good to you?"
+
+[sub_resource type="Resource" id="Resource_p7c65"]
+script = ExtResource("2_rihrq")
 text = "Negotiate your worth."
 payload = "bullet_hell_3_nomask"
 
-[sub_resource type="Resource" id="Resource_l4kpa"]
-script = ExtResource("1_f7mnh")
+[sub_resource type="Resource" id="Resource_vp72h"]
+script = ExtResource("2_rihrq")
 text = "Smile, nod, and accept the offer."
 payload = "bullet_hell_3_mask"
 
 [resource]
-script = ExtResource("2_l4kpa")
+script = ExtResource("3_hhdd2")
 id = "salary_negotiation"
-dialogue = Array[String](["Okay now for the *good* part... Let's discuss salaries and benefits!", "If we decide to go forward with you, we'd like to offer 100 as a starting salary.", "Wow, a 100K salary?", "Haha!", "...", "...", "No, we meant 100 cents hourly.", "(100 cents...hourly? That's got to be a joke!)", "..Haha, that's a good one!", "Indeed, a great offer. Here at RTN, we pride ourselves on our generosity.", "(...Oh god, she means it.)", "(100 cents hourly... That's $8 a day if I don't eat lunch... $40 a week...)", "(I can't even buy a week's worth of groceries from Trader Woe's, much less pay my rent!)", "(What if I negotiate and ask for minimum wage? Would I jeapordize my chances of getting this job?)", "(Will I stay unemployed for life?)", "(Ugh, maybe $8 a day is better than earning nothing at all.)", "(After all, they say you get paid with experience when you're young... right? Right!?)", "Ahem. So, does our offer sound good to you?"])
-responses = Array[ExtResource("1_f7mnh")]([SubResource("Resource_f7mnh"), SubResource("Resource_l4kpa")])
+dialogue = Array[ExtResource("1_l4kpa")]([SubResource("Resource_bsyuw"), SubResource("Resource_27xyo"), SubResource("Resource_vy51d"), SubResource("Resource_5n80c"), SubResource("Resource_1s6y8"), SubResource("Resource_cbdlq"), SubResource("Resource_2jxrr"), SubResource("Resource_g4gik"), SubResource("Resource_2a27j"), SubResource("Resource_fefvt"), SubResource("Resource_w7fyj"), SubResource("Resource_sjyfp"), SubResource("Resource_pcykc"), SubResource("Resource_rqrec"), SubResource("Resource_xa2mg"), SubResource("Resource_mgg3r"), SubResource("Resource_q8xai"), SubResource("Resource_1d4ec")])
+responses = Array[ExtResource("2_rihrq")]([SubResource("Resource_p7c65"), SubResource("Resource_vp72h")])
