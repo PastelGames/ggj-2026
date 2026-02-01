@@ -2,14 +2,16 @@ extends CharacterBody2D
 
 signal died
 
-@export var friction = 1000.0
-@export var acceleration = 1000.0
+#@export var friction = 1000.0
+#@export var acceleration = 1000.0
 @export var bullet_scene: PackedScene
 @export var speed = 300.0
-@export var shot_cd = 0.10
+@export var shot_cd = 0.40
 @export var strength = 1
-@export var bullet_speed = 600.0
+@export var bullet_speed = 800.0
 @export var max_hp = 10
+@export var acceleration = 1000
+@export var friction = 1000
 
 var in_rage = false
 var hp
@@ -37,7 +39,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	print(in_rage)
 	# movement input
 	if Input.is_action_pressed("move_right"):
 		direction.x += 1
@@ -102,7 +103,8 @@ func apply_buff(input_buff_data : BuffData) -> void:
 	var extra_speed = 100
 	var extra_strength = 1
 	var extra_hp = 1
-	
+	if not input_buff_data:
+		return
 	if input_buff_data.BuffName == "speed":
 		speed = speed + extra_speed * input_buff_data.BuffAmount
 		if input_buff_data.BuffDuration > 0:
