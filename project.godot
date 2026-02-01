@@ -37,6 +37,7 @@ folder_colors={
 enemy_bullets=""
 player_bullets=""
 level_manager=""
+player=""
 
 [input]
 

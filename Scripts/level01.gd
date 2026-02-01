@@ -1,7 +1,7 @@
 extends BulletHellManager
 
-signal game_over
-signal success
+signal on_fail
+signal on_success
 
 @export var player_scene: PackedScene
 @export var enemy_scene: PackedScene
@@ -19,6 +19,7 @@ var player: Node = null
 @onready var bullets_player: Node2D = $BulletContainer_Player
 @onready var bullets_enemy: Node2D = $BulletContainer_Enemy
 @onready var enemies: Node2D = $EnemyContainer
+@onready var end_zone: Area2D = $EndZone
 
 func _physics_process(delta: float) -> void:
 	if player:
@@ -36,6 +37,7 @@ func _ready() -> void:
 	$DifficultyTimer.timeout.connect(_difficulty_increase)
 	$DifficultyTimer.start(10)
 	_spawn_fixed()
+	end_zone.area_entered.connect(_end_zone_entered)
 
 func _spawn_player(buffs: BuffData) -> void:
 	var p := player_scene.instantiate()
@@ -59,11 +61,9 @@ func _spawn_enemy() -> void:
 
 func _on_player_died() -> void:
 	if player_lives < 1:
-		emit_signal("game_over")
+		_on_fail()
 	player_lives -= 1
 	
-func _on_success() -> void:
-	emit_signal("success")
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("pause"):
@@ -80,3 +80,8 @@ func _spawn_fixed() -> void:
 	enemies.add_child(e)
 	var s = $EnemySpawn/FixedSpawn
 	e.global_position = s.global_position
+
+func _end_zone_entered(area: Area2D) -> void:
+	var parent := area.get_parent()
+	if parent and parent.is_in_group("player"):
+		_on_success()
