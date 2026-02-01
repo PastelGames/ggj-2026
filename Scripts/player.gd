@@ -100,19 +100,19 @@ func _on_invuln_timeout() -> void:
 func apply_buff(input_buff_data : BuffData) -> void:
 	var extra_speed = 100
 	var extra_strength = 1
-	var extra_hp = 3
+	var extra_hp = 1
 	
 	if input_buff_data.BuffName == "speed":
-		speed = speed + extra_speed
+		speed = speed + extra_speed * input_buff_data.BuffAmount
 		if input_buff_data.BuffDuration > 0:
 			await get_tree().create_timer(input_buff_data.BuffDuration).timeout
-			speed = speed - extra_speed
+			speed = speed - extra_speed * input_buff_data.BuffAmount
 		
 	if input_buff_data.BuffName == "strength":
-		strength = strength + extra_strength
+		strength = strength + extra_strength * input_buff_data.BuffAmount
 		if input_buff_data.BuffDuration > 0:
 			await get_tree().create_timer(input_buff_data.BuffDuration).timeout
-			strength = strength - extra_strength
+			strength = strength - extra_strength * input_buff_data.BuffAmount
 	
 	if input_buff_data.BuffName == "resistance":
-		hp = hp + extra_hp
+		hp = hp + extra_hp * input_buff_data.BuffAmount

@@ -40,3 +40,7 @@ metadata/_edit_use_anchors_ = true
 [node name="DialogueSpeakingPanel" parent="." unique_id=1735828500 instance=ExtResource("3_5aw3v")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
