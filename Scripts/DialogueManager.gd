@@ -17,13 +17,15 @@ var dialogue_interaction_data: DialogueInteractionData:
 		return _dialogue_interaction_data
 	set(val):
 		_dialogue_interaction_data = val
+		_current_dialogue_index = 0
+		if not dialogue_interaction_data.music.is_empty():
+			MusicManager.set_bgm_and_play(dialogue_interaction_data.music)
 		begin_dialogue_interaction()
 
 
 func _ready() -> void:
 	super._ready()
-	begin_dialogue_interaction()
-
+	
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):

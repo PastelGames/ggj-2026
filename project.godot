@@ -16,9 +16,9 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
-GameManager="*uid://cwh3l4em6s6qb"
-SceneManager="*uid://b3im3usbktjv3"
-MusicManager="*uid://ws7nn8is1bno"
+MusicManager="*uid://cemwom08sydd7"
+GameManager="*uid://bad55gk5fdbxq"
+SceneManager="*uid://i4mfrv5ouqw2"
 
 [editor_plugins]
 
@@ -37,6 +37,7 @@ folder_colors={
 
 enemy_bullets=""
 player_bullets=""
+level_manager=""
 
 [input]
 

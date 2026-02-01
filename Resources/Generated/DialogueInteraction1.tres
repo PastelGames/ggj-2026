@@ -1,16 +1,22 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://62bnv7gb8i7r"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://ccpwp8h7u8yqi"]
 
 [ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3rqyq"]
 [ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_8wpqx"]
 
 [sub_resource type="Resource" id="Resource_3rqyq"]
 script = ExtResource("1_3rqyq")
-text = "Continue interview"
-payload = "bullet_hell_1_nomask"
+text = "I'm ready."
+type = 1
+payload = "mispronounced_name"
+
+[sub_resource type="Resource" id="Resource_8wpqx"]
+script = ExtResource("1_3rqyq")
+text = "I'm ready! (Smile one last time.)"
+type = 1
+payload = "mispronounced_name"
 
 [resource]
 script = ExtResource("2_8wpqx")
-id = "correct_name"
-dialogue = Array[String](["Oh, my name is actually pronounced Doug. As in Douglas. Like, I \"dug\" myself into a hole.
-"])
-responses = Array[ExtResource("1_3rqyq")]([SubResource("Resource_3rqyq")])
+id = "intro_scene_continued"
+dialogue = Array[String](["Okay, deep breathes. All you have to do is speak clearly, maintain eye contact, and smile!", "It's no different than reading a script. And just a tiny bit of improv.", "Don't think about paying rent, and definitely don't think about eviction.", "You've got this, Doug. I've got this."])
+responses = Array[ExtResource("1_3rqyq")]([SubResource("Resource_3rqyq"), SubResource("Resource_8wpqx")])

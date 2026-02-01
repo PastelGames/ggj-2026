@@ -1,17 +1,20 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://drxbe2oxy6kf6"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://cqljkak7d2ku3"]
 
 [ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_of24d"]
 [ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_cpoa5"]
 
 [sub_resource type="Resource" id="Resource_of24d"]
 script = ExtResource("1_of24d")
-text = "Continue"
+text = "Admit that you have no clue who Bill Ionair is or his paper."
+payload = "bullet_hell_2_nomask"
+
+[sub_resource type="Resource" id="Resource_cpoa5"]
+script = ExtResource("1_of24d")
+text = "Pretend you've done the reading."
 payload = "bullet_hell_2_mask"
 
 [resource]
 script = ExtResource("2_cpoa5")
-id = "fake_knowing_paper"
-dialogue = Array[String](["It's a cutting-edge technology that generates synergy and shareholder value.
-", "Oops — I meant that question for a Director-level candidate. But you seem very knowledgeable.
-"])
-responses = Array[ExtResource("1_of24d")]([SubResource("Resource_of24d")])
+id = "curveball_question"
+dialogue = Array[String](["Now then. Let's get started with the interview.", "(Here we go. I did my research, I've read the \"Top Ten Common Interview Questions and How to Ace Them\" on the *Wall Street Diary*. I've prepped and rehearsed my lines.)", "(She's going to ask, \"tell me about yourself.\")", "So. Tell me about yourself.", "Of course. I'm graduating this May with a degree in Performing Arts. I've got a lot of experience in managing portfolios...", "(Okay, not too shabby! This is going exactly as I rehearsed.)", "Good, good. On to the next question...", "(Phew, one down. She's probably going to ask about my strengths and weaknesses next.)", "Can you describe your strengths and weaknesses?", "My greatest strength is adaptability. In a live performance, if the tech malfunctions or a line is dropped, the show must still go on.", "Thanks to this experience, I maintain a good performance even when I'm under pressure.", "But because I place such high value on presentation and 'getting it right,' my weakness is my tendency to over-edit myself.", "I'm working on it by establishing fair expectations for myself.", "(Okay Doug, aced the delivery!)", "(This is going so well. She's definitely going to ask about why I want to work here next.)", "Since you're interested in the Associate Portfolio Manager position at RTN, I believe you're read up on Dr. Bill Ionair's latest paper \"The Iterative Framework of Quantized Macro-Elasticity\"?", "Yes, I would like to work at...", "...", "(FUDGE. She's going off script!)", "(Quantized...? Macro...elastic?? Is that like... stretchy physics???)", "(God, what am I even doing here? Am I supposed to know all of this?)", "(If I say I don't know, she's going to think that I'm not enthusiastic enough about this job...)", "(Or worse... that I'm a total quack!)"])
+responses = Array[ExtResource("1_of24d")]([SubResource("Resource_of24d"), SubResource("Resource_cpoa5")])

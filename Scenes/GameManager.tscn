@@ -1,25 +1,19 @@
-[gd_scene format=3 uid="uid://cwh3l4em6s6qb"]
+[gd_scene format=3 uid="uid://bad55gk5fdbxq"]
 
 [ext_resource type="Script" uid="uid://bmiyegvm2tav1" path="res://Scripts/GameManager.gd" id="1_2wx25"]
 [ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_73o00"]
-[ext_resource type="Resource" uid="uid://c76jua4qfkyfh" path="res://Resources/Generated/DialogueInteraction0.tres" id="3_tf73o"]
-[ext_resource type="Resource" uid="uid://62bnv7gb8i7r" path="res://Resources/Generated/DialogueInteraction1.tres" id="4_5p8nv"]
-[ext_resource type="Resource" uid="uid://b7erhgjhlirh0" path="res://Resources/Generated/DialogueInteraction2.tres" id="5_kw7i1"]
-[ext_resource type="Resource" uid="uid://eyo1molfjirr" path="res://Resources/Generated/DialogueInteraction3.tres" id="6_stkq7"]
-[ext_resource type="Resource" uid="uid://dsvc1vxovdco8" path="res://Resources/Generated/DialogueInteraction4.tres" id="7_kvdjo"]
-[ext_resource type="Resource" uid="uid://drxbe2oxy6kf6" path="res://Resources/Generated/DialogueInteraction5.tres" id="8_rvede"]
-[ext_resource type="Resource" uid="uid://c6c08r4554snm" path="res://Resources/Generated/DialogueInteraction6.tres" id="9_yfpbv"]
-[ext_resource type="Resource" uid="uid://q7ob3302x4y0" path="res://Resources/Generated/DialogueInteraction7.tres" id="10_65px1"]
-[ext_resource type="Resource" uid="uid://bmulog1wg2v6f" path="res://Resources/Generated/DialogueInteraction8.tres" id="11_376fu"]
-[ext_resource type="PackedScene" uid="uid://cx4fsol56pjdq" path="res://Scenes/UI/DialogueScreen.tscn" id="12_tf73o"]
-[ext_resource type="PackedScene" uid="uid://dxo26f1dgks86" path="res://Scenes/BulletHell/bullet_hell_main.tscn" id="13_5p8nv"]
+[ext_resource type="Resource" uid="uid://dw3ejbryyps6w" path="res://Resources/Generated/DialogueInteraction0.tres" id="3_tf73o"]
+[ext_resource type="Resource" uid="uid://ccpwp8h7u8yqi" path="res://Resources/Generated/DialogueInteraction1.tres" id="4_73o00"]
+[ext_resource type="Resource" uid="uid://b45hho7u334x7" path="res://Resources/Generated/DialogueInteraction2.tres" id="5_tf73o"]
+[ext_resource type="Resource" uid="uid://p7svmhqaxkhy" path="res://Resources/Generated/DialogueInteraction3.tres" id="6_5p8nv"]
+[ext_resource type="Resource" uid="uid://bwddksv2f7mp2" path="res://Resources/Generated/DialogueInteraction4.tres" id="7_kw7i1"]
+[ext_resource type="Resource" uid="uid://cqljkak7d2ku3" path="res://Resources/Generated/DialogueInteraction5.tres" id="8_stkq7"]
+[ext_resource type="Resource" uid="uid://c2xs5n8pgkk2o" path="res://Resources/Generated/DialogueInteraction6.tres" id="9_kvdjo"]
+[ext_resource type="Resource" uid="uid://cmh5qnr14mox4" path="res://Resources/Generated/DialogueInteraction7.tres" id="10_rvede"]
+[ext_resource type="Resource" uid="uid://bst0pwm7f7qxf" path="res://Resources/Generated/DialogueInteraction8.tres" id="11_yfpbv"]
+[ext_resource type="Resource" uid="uid://d2nu4ib8uj7lh" path="res://Resources/Generated/DialogueInteraction9.tres" id="12_65px1"]
 
 [node name="GameManager" type="Node" unique_id=280040094]
 script = ExtResource("1_2wx25")
-dialogue_interactions = Array[ExtResource("2_73o00")]([ExtResource("3_tf73o"), ExtResource("4_5p8nv"), ExtResource("5_kw7i1"), ExtResource("6_stkq7"), ExtResource("7_kvdjo"), ExtResource("8_rvede"), ExtResource("9_yfpbv"), ExtResource("10_65px1"), ExtResource("11_376fu")])
-scene_dictionary = Dictionary[String, PackedScene]({
-"Bullet Hell Level 1": ExtResource("13_5p8nv"),
-"Dialogue": ExtResource("12_tf73o")
-})
+dialogue_interactions = Array[ExtResource("2_73o00")]([ExtResource("3_tf73o"), ExtResource("4_73o00"), ExtResource("5_tf73o"), ExtResource("6_5p8nv"), ExtResource("7_kw7i1"), ExtResource("8_stkq7"), ExtResource("9_kvdjo"), ExtResource("10_rvede"), ExtResource("11_yfpbv"), ExtResource("12_65px1")])
 starting_dialogue_interaction = ExtResource("3_tf73o")
-metadata/_custom_type_script = "uid://bmiyegvm2tav1"

@@ -1,22 +1,22 @@
-[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://c76jua4qfkyfh"]
+[gd_resource type="Resource" script_class="DialogueInteractionData" format=3 uid="uid://dw3ejbryyps6w"]
 
 [ext_resource type="Script" uid="uid://d1346dxkpngu8" path="res://Scripts/Resources/ResponseData.gd" id="1_3ayi8"]
 [ext_resource type="Script" uid="uid://be1qexpxa77i4" path="res://Scripts/Resources/DialogueInteractionData.gd" id="2_un4x2"]
 
-[sub_resource type="Resource" id="Resource_lpcaj"]
+[sub_resource type="Resource" id="Resource_3ayi8"]
 script = ExtResource("1_3ayi8")
-text = "Correct her. My name is Doug."
-payload = "Bullet Hell"
-
-[sub_resource type="Resource" id="Resource_hjtf7"]
-script = ExtResource("1_3ayi8")
-text = "Let it slide. Go by Duck."
+text = "Practice your super professional \"I-am-an-adult\" smile."
 type = 1
-payload = "accept_duck_name"
+payload = "intro_scene_continued"
+
+[sub_resource type="Resource" id="Resource_un4x2"]
+script = ExtResource("1_3ayi8")
+text = "Wiggle and do a little dance to release tension."
+type = 1
+payload = "intro_scene_continued"
 
 [resource]
 script = ExtResource("2_un4x2")
-id = "office_intro"
-dialogue = Array[String](["At the office.", "Why is no one here yet? Wait, did I get the time wrong?", "Hi... apologies for the delay, we've been experiencing a high turnov... ahem, an increased need in personnel, so we've been conducting so many interviews.
-", "No worries, I wasn't waiting for too long.", "You are...t", "I'm Doug. Applying for the Associate position.", "I'm xyz. You're uh... Duck, right? Nice to meet you.", "Doug's a pretty common name... right?", "Duck's a fun name."])
-responses = Array[ExtResource("1_3ayi8")]([SubResource("Resource_lpcaj"), SubResource("Resource_hjtf7")])
+id = "intro_scene"
+dialogue = Array[String](["10:34 AM, Monday.", "After a hundred of resumes sent into the void, dozens of automated rejection letters,", "The fluorescent lights hum with a clinical brightness, a little *too* bright to be comfortable.", "You look at yourself in the mirror, getting ready for the job interview."])
+responses = Array[ExtResource("1_3ayi8")]([SubResource("Resource_3ayi8"), SubResource("Resource_un4x2")])

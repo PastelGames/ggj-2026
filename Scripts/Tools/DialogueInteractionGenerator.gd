@@ -6,7 +6,7 @@ func _get_property_list():
 	return [{
 		"name": "Generate Dialogue Interactions",
 		"type": TYPE_BOOL,
-		"usage": PROPERTY_USAGE_EDITOR
+		"usage": PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_CHECKABLE
 	}]
 
 func _set(property, value):
@@ -23,7 +23,7 @@ func generate():
 	var parser = YAMLParser.new()
 
 	var yfile = FileAccess.open(
-					"res://story.yml",
+					"res://dialogue_v2.yml",
 					FileAccess.READ)
 	var yaml = yfile.get_as_text()
 	yfile.close()
@@ -35,6 +35,7 @@ func generate():
 		for interaction in result["interactions"]:
 			var dialogue_interaction = DialogueInteractionData.new()
 			var interaction_id = interaction["interaction_id"]
+			print(interaction_id)
 			dialogue_interaction.id = interaction_id
 			for dialogue in interaction.dialogue:
 				dialogue_interaction.dialogue.append(dialogue["text"])
