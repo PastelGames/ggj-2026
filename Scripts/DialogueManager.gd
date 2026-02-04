@@ -83,7 +83,7 @@ func populate_response_buttons_with_data():
 func handle_response(response: ResponseData):
 	match response.type:
 		ResponseData.ResponseType.CHANGE_SCENE:
-			SceneManager.load_scene(response.payload)
+			GameManager.transition_to_bullet_hell(response.payload)
 			
 		ResponseData.ResponseType.NEW_DIALOGUE:
 			dialogue_interaction_data = GameManager.interaction_dictionary[response.payload]

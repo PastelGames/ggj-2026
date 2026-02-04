@@ -72,6 +72,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DialoguePanel" parent="." unique_id=1735828500 instance=ExtResource("5_1w131")]
 
+[node name="SpeakerThumbnailTexture" parent="DialoguePanel" index="0" unique_id=1216936534]
+texture = null
+
 [node name="ResponsePanel" parent="." unique_id=1479755516 instance=ExtResource("4_vxibi")]
 visible = false
 offset_top = 32.0

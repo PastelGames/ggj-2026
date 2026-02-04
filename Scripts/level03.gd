@@ -4,6 +4,8 @@ extends BulletHellManager
 @export var enemy_scene: PackedScene
 @export var fixed_enemy: PackedScene
 @export var player_lives = 1
+@export var next_dialogue: DialogueInteractionData
+
 
 var bullet_parent: Node = null
 var player_location: Vector2 = Vector2.ZERO
@@ -22,8 +24,8 @@ func _physics_process(delta: float) -> void:
 	if player:
 		player_location = player.global_position
 
-func _initialize(buffs: BuffData) -> void:
-	super._initialize(buffs)
+func initialize(buffs: BuffData) -> void:
+	super.initialize(buffs)
 	_spawn_player(buffs)
 	
 func _ready() -> void:
@@ -82,3 +84,6 @@ func _on_end_entered(area: Area2D) -> void:
 	
 	if parent and parent.is_in_group("player"):
 		_on_success()
+
+func _on_success() -> void:
+	GameManager.transition_to_dialogue(next_dialogue)
