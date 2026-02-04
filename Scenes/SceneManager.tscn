@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://i4mfrv5ouqw2"]
 
-[ext_resource type="Script" uid="uid://cbylf4pfv5uy3" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
+[ext_resource type="Script" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
 [ext_resource type="PackedScene" uid="uid://cx4fsol56pjdq" path="res://Scenes/UI/DialogueScreen.tscn" id="2_7xrkh"]
 [ext_resource type="PackedScene" uid="uid://dxo26f1dgks86" path="res://Scenes/BulletHell/bullet_hell_main.tscn" id="3_83gc0"]
 [ext_resource type="PackedScene" uid="uid://bcbx85drsj7vv" path="res://Scenes/BulletHell/level_01.tscn" id="4_8ysa5"]
