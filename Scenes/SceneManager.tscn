@@ -3,10 +3,19 @@
 [ext_resource type="Script" path="res://Scripts/SceneManager.gd" id="1_hjya1"]
 [ext_resource type="PackedScene" uid="uid://cx4fsol56pjdq" path="res://Scenes/UI/DialogueScreen.tscn" id="2_7xrkh"]
 [ext_resource type="PackedScene" uid="uid://dxo26f1dgks86" path="res://Scenes/BulletHell/bullet_hell_main.tscn" id="3_83gc0"]
+[ext_resource type="PackedScene" uid="uid://bcbx85drsj7vv" path="res://Scenes/BulletHell/level_01.tscn" id="4_8ysa5"]
+[ext_resource type="PackedScene" path="res://Scenes/BulletHell/level_02.tscn" id="5_2cmid"]
+[ext_resource type="PackedScene" path="res://Scenes/BulletHell/level_03.tscn" id="6_q4unc"]
 
 [node name="SceneManager" type="Node" unique_id=1171219416]
 script = ExtResource("1_hjya1")
 scene_dictionary = Dictionary[String, PackedScene]({
 "Bullet Hell": ExtResource("3_83gc0"),
-"Dialogue": ExtResource("2_7xrkh")
+"Dialogue": ExtResource("2_7xrkh"),
+"bullet_hell_1_mask": ExtResource("4_8ysa5"),
+"bullet_hell_1_nomask": ExtResource("4_8ysa5"),
+"bullet_hell_2_mask": ExtResource("5_2cmid"),
+"bullet_hell_2_nomask": ExtResource("5_2cmid"),
+"bullet_hell_3_mask": ExtResource("6_q4unc"),
+"bullet_hell_3_nomask": ExtResource("6_q4unc")
 })
